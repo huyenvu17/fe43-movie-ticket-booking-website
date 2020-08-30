@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
-export default class QuanLyUsers extends Component {
+export default class Admin extends Component {
   render() {
     return (
-      <div>
-        <div id="page-top">
+      <div id="page-top">
+        <div>
           {/* Page Wrapper */}
           <div id="wrapper">
             {/* Sidebar */}
@@ -21,22 +21,59 @@ export default class QuanLyUsers extends Component {
                   <i className="fas fa-laugh-wink" />
                 </div>
                 <div className="sidebar-brand-text mx-3">
-                  SB Admin <sup>2</sup>
+                  Moti Admin <sup>2</sup>
                 </div>
               </a>
               {/* Divider */}
+              {/* Heading */}
+              {/* Nav Item - Pages Collapse Menu */}
               <li className="nav-item">
-                <a className="nav-link" href="admin">
-                  <i class="fa fa-home"></i>
-                  <span>Home Admin</span>
+                <a
+                  className="nav-link collapsed"
+                  href="#"
+                  data-toggle="collapse"
+                  data-target="#collapsePages"
+                  aria-expanded="true"
+                  aria-controls="collapsePages"
+                >
+                  <i className="fas fa-fw fa-folder" />
+                  <span>Pages</span>
+                </a>
+                <div
+                  id="collapsePages"
+                  className="collapse"
+                  aria-labelledby="headingPages"
+                  data-parent="#accordionSidebar"
+                >
+                  <div className="bg-white py-2 collapse-inner rounded">
+                    <h6 className="collapse-header">Login Screens:</h6>
+                    <a className="collapse-item" href="login">
+                      Login
+                    </a>
+                    <div className="collapse-divider" />
+                    <h6 className="collapse-header">Other Pages:</h6>
+                    <a className="collapse-item" href="404">
+                      404 Page
+                    </a>
+                  </div>
+                </div>
+              </li>
+              {/* Nav Item - Charts */}
+              {/* Nav Item - Tables */}
+              <li className="nav-item">
+                <a className="nav-link" href="quanlynguoidung">
+                  <i className="fas fa-fw fa-table" />
+                  <span>Admin Tables</span>
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="quanlyphim">
-                  <i class="fa fa-film"></i>
+                  <i className="fas fa-fw fa-table" />
                   <span>Movie Tables</span>
                 </a>
               </li>
+
+              {/* Divider */}
               <hr className="sidebar-divider d-none d-md-block" />
               {/* Sidebar Toggler (Sidebar) */}
               <div className="text-center d-none d-md-inline">
@@ -54,14 +91,12 @@ export default class QuanLyUsers extends Component {
                 {/* Topbar */}
                 <nav className="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
                   {/* Sidebar Toggle (Topbar) */}
-                  <form className="form-inline">
-                    <button
-                      id="sidebarToggleTop"
-                      className="btn btn-link d-md-none rounded-circle mr-3"
-                    >
-                      <i className="fa fa-bars" />
-                    </button>
-                  </form>
+                  <button
+                    id="sidebarToggleTop"
+                    className="btn btn-link d-md-none rounded-circle mr-3"
+                  >
+                    <i className="fa fa-bars" />
+                  </button>
                   {/* Topbar Search */}
                   <form className="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                     <div className="input-group">
@@ -118,6 +153,7 @@ export default class QuanLyUsers extends Component {
                       </div>
                     </li>
                     {/* Nav Item - Alerts */}
+                    {/* Nav Item - Messages */}
                     <div className="topbar-divider d-none d-sm-block" />
                     {/* Nav Item - User Information */}
                     <li className="nav-item dropdown no-arrow">
@@ -173,89 +209,18 @@ export default class QuanLyUsers extends Component {
                 {/* Begin Page Content */}
                 <div className="container-fluid">
                   {/* Page Heading */}
-                  <h1 className="h3 mb-2 text-gray-800">Users Tables</h1>
-                  <p className="mb-4">
-                    DataTables is a third party plugin that is used to generate
-                    the demo table below. For more information about DataTables,
-                    please visit the .
-                  </p>
-                  {/* DataTales Example */}
-                  <div className="card shadow mb-4">
-                    <div className="card-header py-3">
-                      <h6 className="m-0 font-weight-bold text-primary">
-                        DataTables Example
-                      </h6>
-                    </div>
-                    <div className="card-body">
-                      <div className="table-responsive">
-                        <table
-                          className="table table-bordered"
-                          id="dataTable"
-                          width="100%"
-                          cellSpacing={0}
-                        >
-                          <thead>
-                            <tr>
-                              <th>Name</th>
-                              <th>Position</th>
-                              <th>Office</th>
-                              <th>Age</th>
-                              <th>Start date</th>
-                              <th>Salary</th>
-                            </tr>
-                          </thead>
-                          <tfoot>
-                            <tr>
-                              <th>Name</th>
-                              <th>Position</th>
-                              <th>Office</th>
-                              <th>Age</th>
-                              <th>Start date</th>
-                              <th>Salary</th>
-                            </tr>
-                          </tfoot>
-                          <tbody>
-                            <tr>
-                              <td>Tiger Nixon</td>
-                              <td>System Architect</td>
-                              <td>Edinburgh</td>
-                              <td>61</td>
-                              <td>2011/04/25</td>
-                              <td>$320,800</td>
-                            </tr>
-                            <tr>
-                              <td>Garrett Winters</td>
-                              <td>Accountant</td>
-                              <td>Tokyo</td>
-                              <td>63</td>
-                              <td>2011/07/25</td>
-                              <td>$170,750</td>
-                            </tr>
-                            <tr>
-                              <td>Ashton Cox</td>
-                              <td>Junior Technical Author</td>
-                              <td>San Francisco</td>
-                              <td>66</td>
-                              <td>2009/01/12</td>
-                              <td>$86,000</td>
-                            </tr>
-                            <tr>
-                              <td>Cedric Kelly</td>
-                              <td>Senior Javascript Developer</td>
-                              <td>Edinburgh</td>
-                              <td>22</td>
-                              <td>2012/03/29</td>
-                              <td>$433,060</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
+                  <div className="d-sm-flex align-items-center justify-content-between mb-4">
+                    <h1 className="h3 mb-0 text-gray-800">Home Admin</h1>
+                    <a
+                      href="#"
+                      className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
+                    >
+                      <i className="fas fa-download fa-sm text-white-50" />{" "}
+                      Generate Report
+                    </a>
                   </div>
                 </div>
-                {/* /.container-fluid */}
               </div>
-              {/* End of Main Content */}
               {/* Footer */}
               <footer className="sticky-footer bg-white">
                 <div className="container my-auto">
@@ -309,7 +274,7 @@ export default class QuanLyUsers extends Component {
                   >
                     Cancel
                   </button>
-                  <a className="btn btn-primary" href="login.html">
+                  <a className="btn btn-primary" href="login">
                     Logout
                   </a>
                 </div>

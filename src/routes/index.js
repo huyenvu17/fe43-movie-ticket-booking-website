@@ -1,10 +1,11 @@
 import HomePage from "../containers/Home/HomePage";
 import AboutPage from "../containers/Home/AboutPage";
-import Dashboard from "../containers/Admin/Dashboard";
 import UsersManagement from "../containers/Admin/Users";
 import Login from "../containers/Admin/Login";
-import Register from "../containers/Admin/Register";
-import ForgotPassword from "../containers/Admin/ForgotPassword";
+
+import Admin from "../containers/Admin";
+import QuanLyPhim from "../containers/Admin/Movie";
+import QuanLyUsers from "../containers/Admin/Users";
 const routesHome = [
   {
     exact: true,
@@ -21,7 +22,7 @@ const routesAdmin = [
   {
     exact: true,
     path: "/admin",
-    component: Dashboard,
+    component: Admin,
   },
   {
     exact: true,
@@ -35,13 +36,13 @@ const routesAdmin = [
   },
   {
     exact: false,
-    path: "/register",
-    component: Register,
+    path: "/quanlyphim",
+    component: QuanLyPhim,
   },
   {
     exact: false,
-    path: "/forgot-password",
-    component: ForgotPassword,
+    path: "/quanlynguoidung",
+    component: QuanLyUsers,
   },
 ];
 export { routesHome, routesAdmin };
