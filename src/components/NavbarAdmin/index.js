@@ -8,7 +8,7 @@ export default class NavbarAdmin extends Component {
         <nav className="navbar navbar-expand-md bg-dark navbar-dark">
           {/* Brand */}
           <a className="navbar-brand" href="/admin">
-            MoTi Dashboard
+            MoTi Admin
           </a>
           {/* Toggler/collapsibe Button */}
           <button
@@ -23,13 +23,13 @@ export default class NavbarAdmin extends Component {
           <div className="collapse navbar-collapse" id="collapsibleNavbar">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <NavLink activeClassName="active" className="nav-link" to="/admin">
-                  Dashboard
+                <NavLink activeClassName="active" className="nav-link" to="/quanlyphim">
+                  Movie 
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink activeClassName="active"  className="nav-link" to="/add-user">
-                  Add User
+                <NavLink activeClassName="active"  className="nav-link" to="/quanlynguoidung">
+                  Users
                 </NavLink>
               </li>
               {/* <li className="nav-item">

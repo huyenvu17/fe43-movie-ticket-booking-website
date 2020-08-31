@@ -1,29 +1,48 @@
 import HomePage from "../containers/Home/HomePage";
 import AboutPage from "../containers/Home/AboutPage";
-import Dashboard from "../containers/Admin/Dashboard";
-import UsersManagement from '../containers/Admin/Users';
+import UsersManagement from "../containers/Admin/Users";
+import Login from "../containers/Admin/Login";
+
+import Admin from "../containers/Admin";
+import QuanLyPhim from "../containers/Admin/Movie";
+import QuanLyUsers from "../containers/Admin/Users";
 const routesHome = [
   {
     exact: true,
-    path: '/',
-    component: HomePage
+    path: "/",
+    component: HomePage,
   },
   {
     exact: false,
-    path: '/about',
-    component: AboutPage
-  }
-]
+    path: "/about",
+    component: AboutPage,
+  },
+];
 const routesAdmin = [
   {
     exact: true,
-    path: '/admin',
-    component: Dashboard
+    path: "/admin",
+    component: Admin,
   },
   {
     exact: true,
-    path: '/user-management',
-    component: UsersManagement
+    path: "/user-management",
+    component: UsersManagement,
   },
-]
-export {routesHome, routesAdmin};
+  {
+    exact: false,
+    path: "/login",
+    component: Login,
+  },
+  {
+    exact: false,
+    path: "/quanlyphim",
+    component: QuanLyPhim,
+  },
+  {
+    exact: false,
+    path: "/quanlynguoidung",
+    component: QuanLyUsers,
+  },
+];
+export { routesHome, routesAdmin };
