@@ -68,7 +68,7 @@ export default class Admin extends Component {
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="quanlyphim">
-                  <i className="fas fa-fw fa-table" />
+                <i class="fa fa-film"></i>
                   <span>Movie Tables</span>
                 </a>
               </li>
