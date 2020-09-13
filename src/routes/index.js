@@ -6,6 +6,7 @@ import Login from "../containers/Admin/Login";
 import Admin from "../containers/Admin";
 import QuanLyPhim from "../containers/Admin/Movie";
 import QuanLyUsers from "../containers/Admin/Users";
+import SignInSignUp from "../containers/Home/SignInSignUp";
 const routesHome = [
   {
     exact: true,
@@ -16,6 +17,11 @@ const routesHome = [
     exact: false,
     path: "/about",
     component: AboutPage,
+  },  
+  {
+    exact: false,
+    path: "/signin",
+    component: SignInSignUp,
   },
 ];
 const routesAdmin = [

@@ -1,0 +1,36 @@
+.heading-md {
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.47em;
+}
+
+.heading-overflow {
+  font-size: 15px;
+  color: #29303b;
+  margin-bottom: 10px;
+  -webkit-line-clamp: 2;
+  -moz-line-clamp: 2;
+  -ms-line-clamp: 2;
+  -o-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -ms-box-orient: vertical;
+  -o-box-orient: vertical;
+  box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  font-weight: 700;
+}
+.text-md-lighter {
+  color: #686f7a;
+}
+.viewing {
+  h3 {
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.47em;
+  color: #505763;
+  }
+}

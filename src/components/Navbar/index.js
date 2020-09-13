@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
-import {Link, NavLink} from 'react-router-dom'
+import {Link, NavLink} from 'react-router-dom';
+import MotiLogo from '../../content/images/moti-logo.svg';
+import '../../content/styles/components/menu.scss';
 export default class Navbar extends Component {
   render() {
     return (
-      <div>
-        <nav className="navbar navbar-expand-md bg-dark navbar-dark">
-          {/* Brand */}
+      <div className="container menu">
+        <nav className="navbar navbar-expand-md menu">
           <a className="navbar-brand" href="/">
-          MoTi
+            <img src={MotiLogo} />
           </a>
-          {/* Toggler/collapsibe Button */}
           <button
             className="navbar-toggler"
             type="button"
@@ -18,22 +18,27 @@ export default class Navbar extends Component {
           >
             <span className="navbar-toggler-icon" />
           </button>
-          {/* Navbar links */}
           <div className="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul className="navbar-nav">
+            <ul className="nav navbar-nav ml-auto menu__links">
               <li className="nav-item">
                 <NavLink exact activeClassName="active" className="nav-link" to="/">
-                  Home
+                  Lịch Chiếu
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink activeClassName="active"  className="nav-link" to="/about">
-                  About
+                <NavLink activeClassName="active" className="nav-link" to="/about">
+                  Về Chúng Tôi
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink activeClassName="active" className="nav-link" to="/signin">
+                  Đăng Nhâp / Đăng Ký
                 </NavLink>
               </li>
             </ul>
           </div>
         </nav>
+      
       </div>
     );
   }

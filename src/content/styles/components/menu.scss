@@ -1,0 +1,14 @@
+.menu.navbar-expand-md{
+  padding: 0;
+  .navbar-brand{
+    padding: 0;
+  }
+  .menu__links {
+    .nav-item{
+      .nav-link{
+        color: #2A3D66;
+        font-size: 1em;
+      }
+    }
+  }
+}
