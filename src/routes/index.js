@@ -1,7 +1,7 @@
 import HomePage from "../containers/Home/HomePage";
 import AboutPage from "../containers/Home/AboutPage";
 import UsersManagement from "../containers/Admin/Users";
-import Login from "../containers/Login/index";
+import Login from "../containers/Admin/Login";
 
 import Admin from "../containers/Admin";
 import QuanLyPhim from "../containers/Admin/Movie";
