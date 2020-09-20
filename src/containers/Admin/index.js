@@ -27,49 +27,18 @@ export default class Admin extends Component {
               {/* Divider */}
               {/* Heading */}
               {/* Nav Item - Pages Collapse Menu */}
-              <li className="nav-item">
-                <a
-                  className="nav-link collapsed"
-                  href="#"
-                  data-toggle="collapse"
-                  data-target="#collapsePages"
-                  aria-expanded="true"
-                  aria-controls="collapsePages"
-                >
-                  <i className="fas fa-fw fa-folder" />
-                  <span>Pages</span>
-                </a>
-                <div
-                  id="collapsePages"
-                  className="collapse"
-                  aria-labelledby="headingPages"
-                  data-parent="#accordionSidebar"
-                >
-                  <div className="bg-white py-2 collapse-inner rounded">
-                    <h6 className="collapse-header">Login Screens:</h6>
-                    <a className="collapse-item" href="login">
-                      Login
-                    </a>
-                    <div className="collapse-divider" />
-                    <h6 className="collapse-header">Other Pages:</h6>
-                    <a className="collapse-item" href="404">
-                      404 Page
-                    </a>
-                  </div>
-                </div>
-              </li>
               {/* Nav Item - Charts */}
               {/* Nav Item - Tables */}
               <li className="nav-item">
                 <a className="nav-link" href="quanlynguoidung">
                   <i className="fas fa-fw fa-table" />
-                  <span>Admin Tables</span>
+                  <span>Danh Sách Người Dùng</span>
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="quanlyphim">
-                <i class="fa fa-film"></i>
-                  <span>Movie Tables</span>
+                  <i class="fa fa-film"></i>
+                  <span>Danh Sách Phim<i class="fas fa-phoenix-framework"></i></span>
                 </a>
               </li>
 
@@ -210,7 +179,7 @@ export default class Admin extends Component {
                 <div className="container-fluid">
                   {/* Page Heading */}
                   <div className="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 className="h3 mb-0 text-gray-800">Home Admin</h1>
+                    <h1 className="h3 mb-0 text-gray-800">Trang Chủ</h1>
                     <a
                       href="#"
                       className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-
+import BangPhim from "./BangPhim";
+import ModalThemPhim from "./ModalThemPhim";
 export default class QuanLyPhim extends Component {
   render() {
     return (
@@ -31,14 +32,14 @@ export default class QuanLyPhim extends Component {
             {/* Nav Item - Pages Collapse Menu */}
             <li className="nav-item">
               <a className="nav-link" href="admin">
-                <i class="fa fa-home"></i>
-                <span>Home Admin</span>
+                <i className="fa fa-home"></i>
+                <span> Trang Chủ</span>
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="quanlynguoidung">
                 <i className="fas fa-fw fa-table" />
-                <span>Admin Tables</span>
+                <span> Danh Sách Người Dùng</span>
               </a>
             </li>
             {/* Divider */}
@@ -176,78 +177,25 @@ export default class QuanLyPhim extends Component {
               {/* Begin Page Content */}
               <div className="container-fluid">
                 {/* Page Heading */}
-                <h1 className="h3 mb-2 text-gray-800">Movie Tables</h1>
+                <h1 className="h3 mb-2 text-gray-800">Danh Sách Phim</h1>
                 <p className="mb-4">
-                  DataTables is a third party plugin that is used to generate
-                  the demo table below. For more information about DataTables,
-                  please visit the{" "}
-                  .
+                 Danh sách phim cần quản lý
                 </p>
-                {/* DataTales Example */}
-                <div className="card shadow mb-4">
-                  <div className="card-header py-3">
-                    <h6 className="m-0 font-weight-bold text-primary">
-                      DataTables Example
-                    </h6>
-                  </div>
-                  <div className="card-body">
-                    <div className="table-responsive">
-                      <table
-                        className="table table-bordered"
-                        id="dataTable"
-                        width="100%"
-                        cellSpacing={0}
-                      >
-                        <thead>
-                          <tr>
-                            <th>Name</th>
-                            <th>Position</th>
-                            <th>Office</th>
-                            <th>Age</th>
-                            <th>Start date</th>
-                            <th>Salary</th>
-                          </tr>
-                        </thead>
-                        <tfoot>
-                          <tr>
-                            <th>Name</th>
-                            <th>Position</th>
-                            <th>Office</th>
-                            <th>Age</th>
-                            <th>Start date</th>
-                            <th>Salary</th>
-                          </tr>
-                        </tfoot>
-                        <tbody>
-                          <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011/04/25</td>
-                            <td>$320,800</td>
-                          </tr>
-                          <tr>
-                            <td>Garrett Winters</td>
-                            <td>Accountant</td>
-                            <td>Tokyo</td>
-                            <td>63</td>
-                            <td>2011/07/25</td>
-                            <td>$170,750</td>
-                          </tr>
-                          <tr>
-                            <td>Ashton Cox</td>
-                            <td>Junior Technical Author</td>
-                            <td>San Francisco</td>
-                            <td>66</td>
-                            <td>2009/01/12</td>
-                            <td>$86,000</td>
-                          </tr>
-                           </tbody>
-                      </table>
-                    </div>
+                <div className="row">
+                  <div className="col-md-6 col-xl-12 text-left">
+                    <button
+                      className="btn btn-primary"
+                     
+                      data-toggle="modal"
+                      data-target="#myModal"
+                    >
+                      Thêm Phim
+                    </button>
                   </div>
                 </div>
+                <br />
+                {/* Bảng phim */}
+                <BangPhim />
               </div>
               {/* /.container-fluid */}
             </div>
@@ -312,6 +260,9 @@ export default class QuanLyPhim extends Component {
             </div>
           </div>
         </div>
+
+        {/* The Modal */}
+        <ModalThemPhim />
       </div>
     );
   }
