@@ -98,6 +98,7 @@ export default function BangPhim() {
                 >        
                 </i>
                 </div>
+                {/* Sự kiện upload hình ảnh */}
                 <div className="delete mr-2"> 
                 <i
                   className="fa fa-images"

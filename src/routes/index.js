@@ -5,7 +5,7 @@ import Login from "../containers/Login/index";
 
 import Admin from "../containers/Admin";
 import QuanLyPhim from "../containers/Admin/Movie";
-import QuanLyUsers from "../containers/Admin/Users";
+import QuanLyNguoiDung from "../containers/Admin/Users";
 const routesHome = [
   {
     exact: true,
@@ -42,7 +42,7 @@ const routesAdmin = [
   {
     exact: false,
     path: "/quanlynguoidung",
-    component: QuanLyUsers,
+    component: QuanLyNguoiDung,
   },
 ];
 export { routesHome, routesAdmin };

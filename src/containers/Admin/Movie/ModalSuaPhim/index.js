@@ -80,10 +80,9 @@ export default function SuaPhim(props) {
       }
     }
     if (!isValid) {
-      alert("thông tin không hợp lệ");
+      alert("Thông Tin Không Hợp Lệ");
       return;
     }
-    console.log(isValid)
     quanLyAdminService
       .suaPhim(values)
       .then((res) => {

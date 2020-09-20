@@ -33,13 +33,13 @@ export default class QuanLyPhim extends Component {
             <li className="nav-item">
               <a className="nav-link" href="admin">
                 <i className="fa fa-home"></i>
-                <span>Home Admin</span>
+                <span> Trang Chủ</span>
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="quanlynguoidung">
                 <i className="fas fa-fw fa-table" />
-                <span>Admin Tables</span>
+                <span> Danh Sách Người Dùng</span>
               </a>
             </li>
             {/* Divider */}
@@ -177,10 +177,10 @@ export default class QuanLyPhim extends Component {
               {/* Begin Page Content */}
               <div className="container-fluid">
                 {/* Page Heading */}
-                <h1 className="h3 mb-2 text-gray-800">Bảng Phim</h1>
-                {/* <p className="mb-4">
-                 Bảng Danh sách phim có thể thêm xóa sửa phim 
-                </p> */}
+                <h1 className="h3 mb-2 text-gray-800">Danh Sách Phim</h1>
+                <p className="mb-4">
+                 Danh sách phim cần quản lý
+                </p>
                 <div className="row">
                   <div className="col-md-6 col-xl-12 text-left">
                     <button
