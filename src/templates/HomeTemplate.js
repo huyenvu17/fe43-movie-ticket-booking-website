@@ -1,12 +1,14 @@
 import React from 'react';
 import {Route} from 'react-router-dom';
 import Navbar from '../components/Navbar';
-import '../content/styles/signinsignup.css';
+import '../content/styles/main.scss';
 function HomeLayout(props){
   return (
-    <div>
+    <div className="mainpage">
       <Navbar />
-      {props.children}
+      <div className="container">
+        {props.children}
+      </div>
     </div>
   )
 } 

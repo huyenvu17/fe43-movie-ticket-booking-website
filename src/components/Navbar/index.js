@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {Link, NavLink} from 'react-router-dom';
-import MotiLogo from '../../content/images/moti-logo.svg';
-import '../../content/styles/components/menu.scss';
+import MotiLogo from '../../content/images/logo/moti-logo-white.svg';
+import '../../content/styles/components/_menu.scss';
 export default class Navbar extends Component {
   render() {
     return (

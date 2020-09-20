@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import '../../../content/styles/signinsignup.css';
 export default class SignInSignUp extends Component {
   
   constructor(props){
