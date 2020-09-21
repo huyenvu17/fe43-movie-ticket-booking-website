@@ -1,0 +1,37 @@
+.movielist{
+  .nav{
+    .nav-item{
+      .nav-link{
+        background-color: $color-trans;
+        transition: 0.5s all ease-in-out;
+        @include styleText($color-purple-0, 1.2em, 400, $tf-uppercase);
+      }
+      .nav-link.active{
+        @include styleText($color-white-0, 1.2em, 400, $tf-uppercase);
+      }
+    }
+  }
+  .moviepanel{
+    .moviepanel__movieitem{
+      .movieitem__info{
+        .movieitem__rating{
+          color: $color-white-0;
+          i{
+            color: $color-yellow;
+          }
+        }
+        .btn-linking{
+          margin-top: 1em;
+          span{
+            font-size: 1.1em;
+          }
+          ion-icon {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    .moviepanel__slider{
+    }
+  }
+}

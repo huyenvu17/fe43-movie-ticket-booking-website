@@ -5,12 +5,12 @@ export default class MovieSearching extends Component {
   render() {
     return (
       <div className="movie-searching">
-        <div className="row">
-          <div className="col-6 movie-searching__form">
+        <div className="row align-items-center">
+          <div className="col-12 col-md-6 movie-searching__form">
             <MovieSearchForm />
           </div>
-          <div className="col-6 movie-searching__illustration">
-            <img src={MotiIllustration} />
+          <div className="col-12 col-md-6 movie-searching__illustration">
+            <img src={MotiIllustration} className="img-fluid"/>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import MovieList from './MovieList'
 import MovieSearching from './MovieSearching'
 
 export default class HomePage extends Component {
@@ -6,6 +7,7 @@ export default class HomePage extends Component {
     return (
       <div>
         <MovieSearching />
+        <MovieList />
       </div>
     )
   }

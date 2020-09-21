@@ -2,6 +2,8 @@ import React from 'react';
 import {Route} from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import '../content/styles/main.scss';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 function HomeLayout(props){
   return (
     <div className="mainpage">

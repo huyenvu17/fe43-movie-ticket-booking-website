@@ -1,5 +1,11 @@
 .movie-searching{
-  background: #ffffff0d;
+  //background: #ffffff0d;
   border-radius: 25px;
   margin: 15px auto;
+  padding: 0 40px;
+  .movie-searching__form{
+    .btn.btn-solid-dark{
+      width: 100%;
+    }
+  }
 }

@@ -1,5 +1,4 @@
 import HomePage from "../containers/Home/HomePage";
-import AboutPage from "../containers/Home/AboutPage";
 import UsersManagement from "../containers/Admin/Users";
 import Login from "../containers/Login/index";
 
@@ -8,6 +7,7 @@ import QuanLyPhim from "../containers/Admin/Movie";
 import QuanLyUsers from "../containers/Admin/Users";
 import SignInSignUp from "../containers/Home/SignInSignUp";
 import QuanLyNguoiDung from "../containers/Admin/Users";
+import NewsPage from "../containers/Home/NewsPage";
 const routesHome = [
   {
     exact: true,
@@ -16,8 +16,8 @@ const routesHome = [
   },
   {
     exact: false,
-    path: "/about",
-    component: AboutPage,
+    path: "/news",
+    component: NewsPage,
   },  
   {
     exact: false,

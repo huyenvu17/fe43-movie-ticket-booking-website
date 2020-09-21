@@ -27,7 +27,12 @@ export default class Navbar extends Component {
               </li>
               <li className="nav-item">
                 <NavLink activeClassName="active" className="nav-link" to="/about">
-                  Về Chúng Tôi
+                  rạp phim
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink activeClassName="active" className="nav-link" to="/news">
+                  tin tức
                 </NavLink>
               </li>
               <li className="nav-item">
