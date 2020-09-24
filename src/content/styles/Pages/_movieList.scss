@@ -4,6 +4,7 @@
       .nav-link{
         background-color: $color-trans;
         transition: 0.5s all ease-in-out;
+        padding: 0 1em 0 0;
         @include styleText($color-purple-0, 1.2em, 400, $tf-uppercase);
       }
       .nav-link.active{
@@ -14,14 +15,21 @@
   .moviepanel{
     .moviepanel__movieitem{
       .movieitem__info{
+        .movieitem__desc{
+          margin-top: 1em;
+        }
         .movieitem__rating{
           color: $color-white-0;
           i{
             color: $color-yellow;
           }
+          span{
+            font-size: 1.05em;
+            margin-left: 0.1em;
+          }
         }
         .btn-linking{
-          margin-top: 1em;
+          margin-top: 2em;
           span{
             font-size: 1.1em;
           }
@@ -32,6 +40,42 @@
       }
     }
     .moviepanel__slider{
+      background-color: $color-purple-0;
+      padding: 3em 0 2.5em;
+      margin-top: 2em;
+      .container{
+        padding: 0;
+        .slider__list{
+          padding: 0;
+          .slick-slider{
+            .slick-list{
+              .slick-track{
+                .slick-slide{
+                  .slider__item{
+                    padding: 0 0.5em;
+                    outline: none;
+                    cursor: pointer;
+                    img{
+                      margin: auto;
+                      width: 200px;
+                      height: 250px;
+                      border-radius: 10px;
+                      object-fit: cover;
+                    }
+                  }
+                }
+                .slick-slide.slick-current{
+                  .slider__item{
+                    img{
+                      //transform: scale(1.1);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

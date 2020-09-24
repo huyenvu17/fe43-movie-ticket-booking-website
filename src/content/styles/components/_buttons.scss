@@ -8,10 +8,13 @@
   }
 }
 .btn-linking{
-  outline: none;
-  @include styleText($color-white-0, 1.05em, $fw-normal, $tf-uppercase);
-  &:hover, &:focus, &:active, &:active:focus, &:hover:active:focus {
-    @include hoverButton($color-trans, $color-trans, $color-purple-hover-0);
-    box-shadow: none;
+  a{
+    outline: none;
+    @include styleText($color-white-0, 1.05em, $fw-normal, $tf-uppercase);
+    &:hover, &:focus, &:active, &:active:focus, &:hover:active:focus {
+      @include hoverButton($color-trans, $color-trans, $color-purple-hover-0);
+      box-shadow: none;
+    }
   }
+  
 }

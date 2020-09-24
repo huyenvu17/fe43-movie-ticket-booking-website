@@ -4,7 +4,8 @@ import MovieSearchForm from './MovieSearchForm';
 export default class MovieSearching extends Component {
   render() {
     return (
-      <div className="movie-searching">
+      <div className="container">
+        <div className="movie-searching">
         <div className="row align-items-center">
           <div className="col-12 col-md-6 movie-searching__form">
             <MovieSearchForm />
@@ -13,6 +14,7 @@ export default class MovieSearching extends Component {
             <img src={MotiIllustration} className="img-fluid"/>
           </div>
         </div>
+      </div>
       </div>
     )
   }
