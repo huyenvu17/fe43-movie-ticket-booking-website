@@ -6,6 +6,7 @@ import Login from "../containers/Login/index";
 import Admin from "../containers/Admin";
 import QuanLyPhim from "../containers/Admin/Movie";
 import QuanLyNguoiDung from "../containers/Admin/Users";
+import TaoLichChieu from "../containers/Admin/QuanLyLichCheu/TaoLichChieu";
 const routesHome = [
   {
     exact: true,
@@ -43,6 +44,11 @@ const routesAdmin = [
     exact: false,
     path: "/quanlynguoidung",
     component: QuanLyNguoiDung,
+  },
+  {
+    exact: false,
+    path: "/quanLyLichChieu",
+    component: TaoLichChieu,
   },
 ];
 export { routesHome, routesAdmin };
