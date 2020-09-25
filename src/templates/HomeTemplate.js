@@ -1,7 +1,7 @@
 import React from 'react';
 import {Route} from 'react-router-dom';
 import Navbar from '../components/Navbar';
-import '../content/styles/main.scss';
+import '../content/styles/user/main.scss';
 function HomeLayout(props){
   return (
     <div className="mainpage">
