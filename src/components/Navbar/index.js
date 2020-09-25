@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import {Link, NavLink} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import MotiLogo from '../../content/images/logo/moti-logo-white.svg';
-import '../../content/styles/components/_menu.scss';
+import '../../content/styles/user/components/_menu.scss';
+import { NavHashLink as NavLink } from 'react-router-hash-link';
 export default class Navbar extends Component {
   render() {
     return (
@@ -21,28 +22,23 @@ export default class Navbar extends Component {
           <div className="collapse navbar-collapse" id="collapsibleNavbar">
             <ul className="nav navbar-nav ml-auto menu__links">
               <li className="nav-item">
-                <NavLink exact activeClassName="active" className="nav-link" to="/">
+                <NavLink exact activeClassName="active" className="nav-link" to="/#movieList">
                   Lịch Chiếu
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink activeClassName="active" className="nav-link" to="/about">
-                  rạp phim
+                <NavLink activeClassName="active" className="nav-link" to="/#movieTheater">
+                  Rạp phim
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink activeClassName="active" className="nav-link" to="/news">
-                  tin tức
+                <NavLink activeClassName="active" className="nav-link" to="/#latestNews">
+                  Tin Tức
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink activeClassName="active" className="nav-link" to="/signin">
                   Đăng Nhâp / Đăng Ký
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink activeClassName="active "  className="nav-link text-right" to="/dangnhap">
-                 Đăng Nhập
                 </NavLink>
               </li>
             </ul>

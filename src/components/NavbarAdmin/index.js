@@ -1,46 +1,38 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
-
+import MotiLogo from '../../content/images/logo/moti-logo-white.svg';
 export default class NavbarAdmin extends Component {
   render() {
     return (
-      <div>
-        <nav className="navbar navbar-expand-md bg-dark navbar-dark">
-          {/* Brand */}
-          <a className="navbar-brand" href="/admin">
-            MoTi Admin
-          </a>
-          {/* Toggler/collapsibe Button */}
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#collapsibleNavbar"
-          >
-            <span className="navbar-toggler-icon" />
-          </button>
-          {/* Navbar links */}
-          <div className="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <NavLink activeClassName="active" className="nav-link" to="/quanlyphim">
-                  Phim 
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink activeClassName="active"  className="nav-link" to="/quanlynguoidung">
-                  Người Dùng <i className="fa fa-ticket-alt"></i>
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink activeClassName="active"  className="nav-link" to="/quanlylichchieu">
-                  Lịch Chiếu
-                </NavLink>
-              </li>
-            </ul>
+        <ul className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/admin">
+          <div className="sidebar-brand-icon">
+            <img src={MotiLogo} />
           </div>
-        </nav>
-      </div>
+          <div className="sidebar-brand-text mx-3">MoTi Admin</div>
+        </a>
+        <hr className="sidebar-divider my-0" />
+        <li className="nav-item active">
+            <NavLink activeClassName="active" className="nav-link" to="/quanlyphim">
+            <i className="fas fa-fw fa-tachometer-alt" />
+            <span>Phim</span> 
+           </NavLink>
+        </li>
+        <hr className="sidebar-divider" />
+        <li className="nav-item active">
+          <NavLink activeClassName="active" className="nav-link" to="/quanlynguoidung">
+            <i className="fas fa-fw fa-tachometer-alt" />
+            <span>Người Dùng</span>
+          </NavLink>
+        </li>
+        <hr className="sidebar-divider" />
+        <li className="nav-item active">
+            <NavLink activeClassName="active" className="nav-link" to="/quanlylichchieu">
+            <i className="fas fa-fw fa-tachometer-alt" />
+            <span>Lịch Chiếu</span> 
+           </NavLink>
+        </li>
+      </ul>
     )
   }
 }

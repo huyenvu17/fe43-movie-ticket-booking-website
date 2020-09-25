@@ -4,7 +4,7 @@ import MoviePanel from './MoviePanel'
 export default class MovieList extends Component {
   render() {
     return (
-      <div className="movielist">
+      <div className="movielist" id="movieList">
         <div className="container">
           <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
             <li className="nav-item">
