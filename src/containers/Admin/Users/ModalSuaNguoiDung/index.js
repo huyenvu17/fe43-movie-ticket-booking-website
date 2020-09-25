@@ -62,16 +62,14 @@ export default function ModalSuaNguoiDung(props) {
         //Kiểm tra lỗi
         isValid = false;
       }
-    }
-    for (let key in errors) {
-      for (let key in errors) {
+    } 
+   for (let key in errors) {
         if (errors[key] !== "") {
           isValid = false;
         }
       }
-    }
     if (!isValid) {
-      alert("Thông Tin Không Hợp Lệ");
+      alert("Thông Tin Bạn Nhập Không Hợp Lệ");
       return;
     }
     quanLyAdminService
@@ -87,7 +85,7 @@ export default function ModalSuaNguoiDung(props) {
       })
       .catch((err) => {
         Swal.fire({
-          title: "Sưa Thông Tin Thất Bại",
+          title: "Sửa Thông Tin Thất Bại",
           icon: "error",
         });
       });
@@ -107,6 +105,27 @@ export default function ModalSuaNguoiDung(props) {
           {/* Modal body */}
           <div className="modal-body">
             <form role="form" onSubmit={handleSubmit}>
+            <div className="form-group">
+                <div className="input-group">
+                  <div className="input-group-prepend">
+                    <span className="input-group-text">
+                      <i className="fa fa-id-badge"></i>
+                    </span>
+                  </div>
+                  <input
+                    type="text"
+                    name="taiKhoan"
+                    className="form-control input-sm"
+                    placeholder="Nhập Tài Khoản"
+                    value={state.values.taiKhoan}
+                    disabled
+                    required
+                  />
+                </div>
+                <span className="text-danger">
+                  {state.errors.taiKhoan}
+                </span>
+              </div>
               <div className="form-group">
                 <div className="input-group">
                   <div className="input-group-prepend">
@@ -128,27 +147,7 @@ export default function ModalSuaNguoiDung(props) {
                   {state.errors.hoTen}
                 </span>
               </div>
-              <div className="form-group">
-                <div className="input-group">
-                  <div className="input-group-prepend">
-                    <span className="input-group-text">
-                      <i className="fa fa-id-badge"></i>
-                    </span>
-                  </div>
-                  <input
-                    type="text"
-                    name="taiKhoan"
-                    className="form-control input-sm"
-                    placeholder="Nhập Tài Khoản"
-                    value={state.values.taiKhoan}
-                    disabled
-                    required
-                  />
-                </div>
-                <span className="text-danger">
-                  {state.errors.taiKhoan}
-                </span>
-              </div>
+              
               <div className="form-group">
                 <div className="input-group">
                   <div className="input-group-prepend">
@@ -241,6 +240,7 @@ export default function ModalSuaNguoiDung(props) {
                     </span>
                   </div>
                   <select
+                   class="form-control"
                     name="maLoaiNguoiDung"
                     onChange={handleChangeInput}
                     value={state.values.maLoaiNguoiDung}
@@ -250,7 +250,7 @@ export default function ModalSuaNguoiDung(props) {
                     <option value="QuanTri">Quản Trị</option>
                   </select>
                 </div>
-                <span className="text-danger" id="MaLoa">
+                <span className="text-danger" id="MaLoai">
                   {state.errors.maLoaiNguoiDung}
                 </span>
               </div>

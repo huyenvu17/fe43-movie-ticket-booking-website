@@ -32,13 +32,19 @@ export default class Admin extends Component {
               <li className="nav-item">
                 <a className="nav-link" href="quanlynguoidung">
                   <i className="fas fa-fw fa-table" />
-                  <span>Danh Sách Người Dùng</span>
+                  <span>Quản Lý Người Dùng</span>
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="quanlyphim">
                   <i class="fa fa-film"></i>
-                  <span>Danh Sách Phim<i class="fas fa-phoenix-framework"></i></span>
+                  <span>Quản lý Phim<i class="fas fa-phoenix-framework"></i></span>
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="quanlylichchieu">
+                <i className="fa fa-chair" />
+                  <span>Quản Lý Lịch Chiếu<i class="fas fa-phoenix-framework"></i></span>
                 </a>
               </li>
 

@@ -8,6 +8,7 @@ import QuanLyUsers from "../containers/Admin/Users";
 import SignInSignUp from "../containers/Home/SignInSignUp";
 import QuanLyNguoiDung from "../containers/Admin/Users";
 import NewsPage from "../containers/Home/NewsPage";
+import TaoLichChieu from "../containers/Admin/QuanLyLichCheu/TaoLichChieu";
 const routesHome = [
   {
     exact: true,
@@ -50,6 +51,11 @@ const routesAdmin = [
     exact: false,
     path: "/quanlynguoidung",
     component: QuanLyNguoiDung,
+  },
+  {
+    exact: false,
+    path: "/quanLyLichChieu",
+    component: TaoLichChieu,
   },
 ];
 export { routesHome, routesAdmin };

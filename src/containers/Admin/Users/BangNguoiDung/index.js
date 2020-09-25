@@ -52,7 +52,7 @@ export default function BangNguoiDung() {
                     Swal.fire({
                       title: "Bạn có muốn ?",
                       text: `Xoá người dùng ${user.taiKhoan}`,
-                      icon: "warning",
+                      icon: "error",
                       buttons: true,
                       dangerMode: true,
                     }).then((Delete) => {
@@ -63,7 +63,6 @@ export default function BangNguoiDung() {
                             Swal.fire({
                               title: "Xóa người dùng thành công",
                               icon: "success",
-                              button: "OK",
                             });
                             quanLyAdminService
                               .layDanhSachNguoiDung()
@@ -77,7 +76,7 @@ export default function BangNguoiDung() {
                           .catch((err) => {
                             Swal.fire({
                               title: "Xóa Phim không thành công",
-                              icon: "warning",
+                              icon: "error",
                             });
                           });
                       }

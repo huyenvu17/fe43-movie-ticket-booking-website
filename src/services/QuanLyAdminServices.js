@@ -75,5 +75,16 @@ export class QuanLyAdmin {
       },
     });
   };
+  taoLichChieu = (thongTin) => {
+    return axios({
+      url: `${domain}/QuanLyDatVe/TaoLichChieu`,
+      method: "POST",
+      data: thongTin,
+      headers: {
+        Authorization: "Bearer " + token,
+      },
+    });
+  };
+
 }
 export const quanLyAdminService = new QuanLyAdmin();
