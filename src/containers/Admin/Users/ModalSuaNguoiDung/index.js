@@ -152,7 +152,7 @@ export default function ModalSuaNguoiDung(props) {
                 <div className="input-group">
                   <div className="input-group-prepend">
                     <span className="input-group-text">
-                      <i className="fa fa-passport"></i>
+                    <i className="fa fa-key"></i>
                     </span>
                   </div>
                   <input
@@ -194,7 +194,7 @@ export default function ModalSuaNguoiDung(props) {
                 <div className="input-group">
                   <div className="input-group-prepend">
                     <span className="input-group-text">
-                      <i className="fa fa-mobile-alt"></i>
+                    <i class="fa fa-phone"></i>
                     </span>
                   </div>
                   <input
@@ -236,7 +236,7 @@ export default function ModalSuaNguoiDung(props) {
                 <div className="input-group">
                   <div className="input-group-prepend">
                     <span className="input-group-text">
-                      <i className="fa fa-user-friends"></i>
+                    <i class="fa fa-users" aria-hidden="true"></i>
                     </span>
                   </div>
                   <select

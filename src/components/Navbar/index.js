@@ -40,6 +40,11 @@ export default class Navbar extends Component {
                   Đăng Nhâp / Đăng Ký
                 </NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink activeClassName="active "  className="nav-link text-right" to="/dangnhap">
+                 Đăng Nhập
+                </NavLink>
+              </li>
             </ul>
           </div>
         </nav>

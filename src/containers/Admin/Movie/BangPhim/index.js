@@ -4,6 +4,8 @@ import { quanLyAdminService } from "../../../../services/QuanLyAdminServices";
 import SuaPhim from "../ModalSuaPhim";
 import Swal from "sweetalert2";
 import UpLoadHinhAnh from "../UpLoadHinhAnh";
+
+
 var moment = require("moment");
 export default function BangPhim() {
   let [danhSachPhim, setDanhSachPhim] = useState([]);
@@ -19,7 +21,9 @@ export default function BangPhim() {
       });
   }, []);
   const renderDanhSachPhim = () => {
-    return danhSachPhim.map((phim, index) => {
+    return danhSachPhim
+   
+    .map((phim, index) => {
       return (
         <tr tabIndex={-1} key={phim.maPhim}>
           <th scope="row">{phim.maPhim}</th>
@@ -48,8 +52,8 @@ export default function BangPhim() {
                   data-target={`#m${phim.maPhim}`}
                 ></i>
                 <SuaPhim phim={phim} />
-                </div>
-              <div className="upload mr-2">              
+              </div>
+              <div className="upload mr-2">
                 {/* Sự Kiện Xóa Phim */}
                 <i
                   className="fa fa-trash"
@@ -61,7 +65,7 @@ export default function BangPhim() {
                     Swal.fire({
                       title: "Bạn có muốn ?",
                       text: `Xoá phim ${phim.tenPhim}`,
-                      icon: "warning",
+                      icon: "error",
                       buttons: true,
                       dangerMode: true,
                     }).then((Delete) => {
@@ -95,13 +99,12 @@ export default function BangPhim() {
                   data-toggle="tooltip"
                   data-placement="top"
                   title="Xóa Phim"
-                >        
-                </i>
-                </div>
-                {/* Sự kiện upload hình ảnh */}
-                <div className="delete mr-2"> 
+                ></i>
+              </div>
+              {/* Sự kiện upload hình ảnh */}
+              <div className="delete mr-2">           
                 <i
-                  className="fa fa-images"
+                  className="fa fa-image"
                   style={{
                     cursor: "pointer",
                     color: "#21d617",
@@ -117,6 +120,7 @@ export default function BangPhim() {
       );
     });
   };
+
   return (
     <div className="table-responsive">
       <table className="table">
@@ -134,7 +138,7 @@ export default function BangPhim() {
           </tr>
         </thead>
         <tbody>{renderDanhSachPhim()}</tbody>
-      </table>
+      </table>      
     </div>
   );
 }

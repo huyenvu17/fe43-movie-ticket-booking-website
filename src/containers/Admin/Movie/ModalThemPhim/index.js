@@ -172,7 +172,7 @@ export default class ModalThemPhim extends Component {
                   <div className="input-group">
                     <div className="input-group-prepend">
                       <span className="input-group-text">
-                        <i className="fa fa-ad"></i>
+                      <i className="fa fa-align-justify"></i>
                       </span>
                     </div>
                     <input
@@ -230,7 +230,7 @@ export default class ModalThemPhim extends Component {
                   <div className="input-group">
                     <div className="input-group-prepend">
                       <span className="input-group-text">
-                        <i className="fa fa-file"></i>
+                      <i class="fa fa-align-justify"></i>
                       </span>
                     </div>
                     <input

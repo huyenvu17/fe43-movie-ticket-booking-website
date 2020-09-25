@@ -149,11 +149,11 @@ export default class ModalThemNguoiDung extends Component {
                   <div className="input-group">
                     <div className="input-group-prepend">
                       <span className="input-group-text">
-                      <i className="fa fa-passport"></i>
+                      <i className="fa fa-key"></i>
                       </span>
                     </div>
                     <input
-                      type="pass"
+                      type="password"
                       name="matKhau"
                       className="form-control input-sm"
                       placeholder="Nhập Mật Khẩu"
@@ -189,7 +189,7 @@ export default class ModalThemNguoiDung extends Component {
                   <div className="input-group">
                     <div className="input-group-prepend">
                       <span className="input-group-text">
-                      <i className="fa fa-mobile-alt"></i>
+                      <i className="fa fa-phone"></i>
                       </span>
                     </div>
                     <input
@@ -229,10 +229,11 @@ export default class ModalThemNguoiDung extends Component {
                   <div className="input-group">
                     <div className="input-group-prepend">
                       <span className="input-group-text">
-                      <i className="fa fa-user-friends"></i>
+                      <i class="fa fa-users" aria-hidden="true"></i>
                       </span>
                     </div>
                     <select
+                    class="form-control"
                     name="maLoaiNguoiDung"
                     onChange={this.handleChangeInput}                
                   >
@@ -241,7 +242,7 @@ export default class ModalThemNguoiDung extends Component {
                     <option value="QuanTri">Quản Trị</option>
                   </select>
                   </div>
-                  <span className="text-danger" id="MaLoa">
+                  <span className="text-danger" id="MaLoai">
                     {this.state.errors.maLoaiNguoiDung}
                   </span>
                 </div>

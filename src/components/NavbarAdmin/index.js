@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Link, NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 export default class NavbarAdmin extends Component {
   render() {
@@ -24,19 +24,19 @@ export default class NavbarAdmin extends Component {
             <ul className="navbar-nav">
               <li className="nav-item">
                 <NavLink activeClassName="active" className="nav-link" to="/quanlyphim">
-                  Movie 
+                  Phim 
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink activeClassName="active"  className="nav-link" to="/quanlynguoidung">
-                  Users
+                  Người Dùng <i class="fa fa-ticket-alt"></i>
                 </NavLink>
               </li>
-              {/* <li className="nav-item">
-                <NavLink activeClassName="active"  className="nav-link" to="/list-movie">
-                  Movies
+              <li className="nav-item">
+                <NavLink activeClassName="active"  className="nav-link" to="/quanlylichchieu">
+                  Lịch Chiếu
                 </NavLink>
-              </li> */}
+              </li>
             </ul>
           </div>
         </nav>
