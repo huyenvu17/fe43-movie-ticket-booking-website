@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
+import ReactDOM from 'react-dom';
 import { quanLyPhimServices } from "../../../../services/QuanLyPhimServices";
 import { quanLyAdminService } from "../../../../services/QuanLyAdminServices";
 import SuaPhim from "../ModalSuaPhim";
 import Swal from "sweetalert2";
 import UpLoadHinhAnh from "../UpLoadHinhAnh";
-
-
 var moment = require("moment");
+
 export default function BangPhim() {
   let [danhSachPhim, setDanhSachPhim] = useState([]);
   useEffect(() => {
@@ -21,9 +21,7 @@ export default function BangPhim() {
       });
   }, []);
   const renderDanhSachPhim = () => {
-    return danhSachPhim
-   
-    .map((phim, index) => {
+    return danhSachPhim.map((phim, index) => {
       return (
         <tr tabIndex={-1} key={phim.maPhim}>
           <th scope="row">{phim.maPhim}</th>
@@ -120,7 +118,6 @@ export default function BangPhim() {
       );
     });
   };
-
   return (
     <div className="table-responsive">
       <table className="table">

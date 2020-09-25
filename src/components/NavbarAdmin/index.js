@@ -29,7 +29,7 @@ export default class NavbarAdmin extends Component {
               </li>
               <li className="nav-item">
                 <NavLink activeClassName="active"  className="nav-link" to="/quanlynguoidung">
-                  Người Dùng <i class="fa fa-ticket-alt"></i>
+                  Người Dùng <i className="fa fa-ticket-alt"></i>
                 </NavLink>
               </li>
               <li className="nav-item">
