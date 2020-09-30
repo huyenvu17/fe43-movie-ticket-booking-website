@@ -14,21 +14,21 @@ export default class NavbarAdmin extends Component {
         <hr className="sidebar-divider my-0" />
         <li className="nav-item active">
             <NavLink activeClassName="active" className="nav-link" to="/quanlyphim">
-            <i className="fas fa-fw fa-tachometer-alt" />
+            <i className="fa fa-film" aria-hidden="true"></i>
             <span>Phim</span> 
            </NavLink>
         </li>
         <hr className="sidebar-divider" />
         <li className="nav-item active">
           <NavLink activeClassName="active" className="nav-link" to="/quanlynguoidung">
-            <i className="fas fa-fw fa-tachometer-alt" />
+          <i className="fa fa-users" aria-hidden="true"></i>
             <span>Người Dùng</span>
           </NavLink>
         </li>
         <hr className="sidebar-divider" />
         <li className="nav-item active">
             <NavLink activeClassName="active" className="nav-link" to="/quanlylichchieu">
-            <i className="fas fa-fw fa-tachometer-alt" />
+            <i className="fas fa-chair" aria-hidden="true"></i>
             <span>Lịch Chiếu</span> 
            </NavLink>
         </li>

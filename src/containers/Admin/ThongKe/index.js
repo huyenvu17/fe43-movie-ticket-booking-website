@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { quanLyPhimServices } from "../../services/QuanLyPhimServices";
-export default function Admin() {
+import { quanLyPhimServices } from "../../../services/QuanLyPhimServices";
+export default function ThongKe() {
   let [lstHeThongRap, setHeThongRap] = useState([]);
 
   useEffect(() => {

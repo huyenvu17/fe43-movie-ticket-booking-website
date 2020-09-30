@@ -26,7 +26,7 @@ export class QuanLyAdmin {
       method: "POST",
       data: phim,
       headers: {
-        Authorization: "Bearer " + token,
+        Authorization: "Bearer " + localStorage.getItem(token),
       },
     });
   };
@@ -35,7 +35,7 @@ export class QuanLyAdmin {
       url: `${domain}/QuanLyPhim/XoaPhim?MaPhim=${maPhim}`,
       method: "DELETE",
       headers: {
-        Authorization: "Bearer " + token,
+        Authorization: "Bearer " + localStorage.getItem(token),
       },
     });
   };
@@ -52,7 +52,7 @@ export class QuanLyAdmin {
       method: "POST",
       data: thongTinNguoiDung,
       headers: {
-        Authorization: "Bearer " + token,
+        Authorization: "Bearer " + localStorage.getItem(token),
       },
     });
   };
@@ -62,7 +62,7 @@ export class QuanLyAdmin {
       method: "PUT",
       data: thongTinNguoiDung,
       headers: {
-        Authorization: "Bearer " + token,
+        Authorization: "Bearer " + localStorage.getItem(token),
       },
     });
   };
@@ -71,7 +71,7 @@ export class QuanLyAdmin {
       url: `${domain}/QuanLyNguoiDung/XoaNguoiDung?TaiKhoan=${taiKhoan}`,
       method: "DELETE",
       headers: {
-        Authorization: "Bearer " + token,
+        Authorization: "Bearer " + localStorage.getItem(token),
       },
     });
   };
@@ -81,7 +81,7 @@ export class QuanLyAdmin {
       method: "POST",
       data: thongTin,
       headers: {
-        Authorization: "Bearer " + token,
+        Authorization: "Bearer " + localStorage.getItem(token),
       },
     });
   };
