@@ -52,9 +52,7 @@ export default function BangNguoiDung() {
                     Swal.fire({
                       title: "Bạn có muốn ?",
                       text: `Xoá người dùng ${user.taiKhoan}`,
-                      icon: "error",
-                      buttons: true,
-                      dangerMode: true,
+                      icon: "error",                    
                     }).then((Delete) => {
                       if (Delete) {
                         quanLyAdminService

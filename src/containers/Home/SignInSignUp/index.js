@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import '../../../content/styles/user/signinsignup.css';
-export default class SignInSignUp extends Component {
-  
+import { userLogin } from '../../../Config/config'
+import SignIn from './SignIn';
+
+  export default class SignInSignUp extends Component {
+
   constructor(props){
     super(props);
     this.state = {
@@ -25,13 +28,7 @@ export default class SignInSignUp extends Component {
           </form>
         </div>
         <div className="form-container sign-in-container">
-          <form action="#">
-            <h1>Đăng Nhập</h1>
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Mật Khẩu" />
-            {/* <a href="#">Forgot your password?</a> */}
-            <button>Đăng Nhập</button>
-          </form>
+      <SignIn/>
         </div>
         <div className="overlay-container">
           <div className="overlay">
