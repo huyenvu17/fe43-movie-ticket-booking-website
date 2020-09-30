@@ -93,11 +93,11 @@ const renderCumRap = () => {
       return thongTinPhim.heThongRapChieu?.map((rap) => {
         return rap.cumRapChieu.map((cumRap) => {
           if (maCumRap === cumRap.maCumRap) {
-            const lichChieuPhim = groupBy(
+            const lichChieu = groupBy(
               cumRap.lichChieuPhim,
               "ngayChieuGioChieu"
             );
-            let entries = Object.entries(lichChieuPhim);
+            let entries = Object.entries(lichChieu);
             let dataLayout = entries.map(([value], i) => {
               return (
                 <option value={value} key={i}>
@@ -117,11 +117,11 @@ const renderCumRap = () => {
       return thongTinPhim.heThongRapChieu?.map((rap) => {
         return rap.cumRapChieu?.map((cumRap) => {
           if (maCumRap === cumRap.maCumRap) {
-            const lichChieuPhim = groupBy(
+            const lichChieu = groupBy(
               cumRap.lichChieuPhim,
               "ngayChieuGioChieu"
             );
-            let entries = Object.entries(lichChieuPhim);
+            let entries = Object.entries(lichChieu);
             let dataLayout = entries.map(([index, value], i) => {
               return value.map((item) => {
                 if (ngayChieu === index) {
@@ -147,14 +147,14 @@ const renderCumRap = () => {
       </div>
       <div className="form-row">
         <div className="form-group col-6">
-          <select id="inputState" className="form-control" defaultValue={'DEFAULT'}  onChange={layMaPhim}>
-            <option value="DEFAULT" >Phim</option>
+          <select id="inputState" className="form-control" onChange={layMaPhim}>
+            <option disabled selected >Phim</option>
             {renderDanhSachPhim()}
           </select>
         </div>
         <div className="form-group col-6">
-          <select id="inputState" className="form-control"  defaultValue={'DEFAULT'} onChange={layMaHeThongRap}>
-            <option value="DEFAULT" > Chọn Rạp Chiếu </option>
+          <select id="inputState" className="form-control" onChange={layMaHeThongRap}>
+            <option disabled selected > Chọn Rạp Chiếu </option>
             {renderCumRap()}
           
           </select>
@@ -162,14 +162,14 @@ const renderCumRap = () => {
       </div>
       <div className="form-row">
         <div className="form-group col-6">
-          <select id="inputState" className="form-control"  defaultValue={'DEFAULT'}  onChange={handleNgayChieu}>
-            <option  value="DEFAULT" >Ngày Xem</option>
+          <select id="inputState" className="form-control"   onChange={handleNgayChieu}>
+            <option disabled selected >Ngày Xem</option>
             {renderNgayChieu()}
           </select>
         </div>
         <div className="form-group col-6">
-          <select id="inputState" className="form-control"  defaultValue={'DEFAULT'} onChange={handleLichChieu}>
-            <option value="DEFAULT" >Xuất Chiếu</option>
+          <select id="inputState" className="form-control" onChange={handleLichChieu}>
+            <option disabled selected>Xuất Chiếu</option>
             {renderGioChieu()}
           </select>
         </div>

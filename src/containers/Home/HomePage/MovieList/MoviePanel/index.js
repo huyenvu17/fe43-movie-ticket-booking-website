@@ -5,7 +5,6 @@ import Slider from "react-slick";
 import {connect} from 'react-redux';
 import * as movieAction from '../../../../../redux/actions/QuanLyPhimAction';
 import MovieItem from './MovieItem';
-var moment = require('moment');
 class MoviePanel extends Component {
   constructor(props){
     super(props);
@@ -22,8 +21,6 @@ class MoviePanel extends Component {
       return (
         <div className="slider__item" key={index} onClick={() => this.showMovieItemInfo(movieItem)}>
             <img src={movieItem.hinhAnh} className="img-fluid" alt={movieItem.hinhAnh}/>
-             <div>{movieItem.tenPhim}</div>
-             <div>{moment(movieItem.ngayKhoiChieu).format("yyyy")}</div>
         </div>
       )
     })

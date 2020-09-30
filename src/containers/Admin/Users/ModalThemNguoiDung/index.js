@@ -229,11 +229,11 @@ export default class ModalThemNguoiDung extends Component {
                   <div className="input-group">
                     <div className="input-group-prepend">
                       <span className="input-group-text">
-                      <i className="fa fa-users" aria-hidden="true"></i>
+                      <i class="fa fa-users" aria-hidden="true"></i>
                       </span>
                     </div>
                     <select
-                    className="form-control"
+                    class="form-control"
                     name="maLoaiNguoiDung"
                     onChange={this.handleChangeInput}                
                   >
