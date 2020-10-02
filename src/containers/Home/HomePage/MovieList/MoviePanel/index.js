@@ -60,7 +60,7 @@ class MoviePanel extends Component {
   }
 }
 
-const  mapStateToProps = state => ({
+const mapStateToProps = state => ({
   movieList: state.QuanLyPhimReducer.movieList
 })
 export default connect(mapStateToProps)(MoviePanel)

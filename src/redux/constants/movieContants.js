@@ -1,3 +1,4 @@
 export const XEM_CHI_TIET = "XEM_CHI_TIET";
 export const GET_MOVIE_LIST = "GET_MOVIE_LIST";
 export const GET_MOVIE_LIST_AXIOS = "GET_MOVIE_LIST_AXIOS";
+export const GET_MOVIE_THEATER = "GET_MOVIE_THEATER";

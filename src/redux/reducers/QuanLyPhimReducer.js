@@ -2,6 +2,7 @@ import * as MovieTypes from '../types/QuanLyPhimType';
 import * as MovieConst from '../constants/movieContants';
 const statePhim = {
   suaPhim: {
+    biDanh: "what-s-wrong-with-secretary-kimm",
     maPhim: "",
     tenPhim: "",
     biDanh: "",
@@ -12,23 +13,17 @@ const statePhim = {
     maNhom: "",
     danhGia: "",
   },
-  movieList: [{
-    biDanh: "phim-khong-ten",
-    danhGia: 10,
-    hinhAnh: "http://movie0706.cybersoft.edu.vn/hinhanh/phim-khong-ten_gp01.jpg",
-    maNhom: "GP01",
-    maPhim: 1314,
-    moTa: "AngryBird Cosplay",
-    ngayKhoiChieu: "2020-02-06T00:00:00",
-    tenPhim: "Phim Không tên",
-    trailer: "AngryBird Cosplay",
-  }]
+  movieList: [],
+  movieTheater: []
 };
 
 export default (state = statePhim, action) => {
   switch (action.type) {
     case MovieConst.GET_MOVIE_LIST: {
       return {...state, movieList: action.movieList}
+    }
+    case MovieConst.GET_MOVIE_THEATER: {
+      return {...state, movieTheater: action.movieTheater}
     }
     case MovieTypes.XEM_CHI_TIET: {
       statePhim.suaPhim = action.value;

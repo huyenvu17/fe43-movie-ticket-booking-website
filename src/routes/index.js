@@ -7,7 +7,6 @@ import NewsPage from "../containers/Home/NewsPage";
 import Profile from "../containers/Home/Profile";
 import Admin from "../containers/Admin";
 import QuanLyLichChieu from "../containers/Admin/QuanLyLichChieu";
-import News from "../containers/Admin/News";
 
 const routesHome = [
   {
@@ -61,11 +60,6 @@ const routesAdmin = [
     exact: false,
     path: "/quanLyLichChieu", 
     component: QuanLyLichChieu,
-  },
-  {
-    exact: false,
-    path: "/quanlytintuc", 
-    component: News,
   },
 ];
 export { routesHome, routesAdmin };
