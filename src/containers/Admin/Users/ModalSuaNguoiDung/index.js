@@ -2,8 +2,6 @@ import React, { Component, useState } from "react";
 import { quanLyAdminService } from "../../../../services/QuanLyAdminServices";
 import { groupID } from "../../../../Config/config";
 import Swal from "sweetalert2";
-import { values } from "lodash";
-import { event } from "jquery";
 
 export default function ModalSuaNguoiDung(props) {
   let { user } = props;
@@ -194,7 +192,7 @@ export default function ModalSuaNguoiDung(props) {
                 <div className="input-group">
                   <div className="input-group-prepend">
                     <span className="input-group-text">
-                    <i class="fa fa-phone"></i>
+                    <i className="fa fa-phone"></i>
                     </span>
                   </div>
                   <input
@@ -236,11 +234,11 @@ export default function ModalSuaNguoiDung(props) {
                 <div className="input-group">
                   <div className="input-group-prepend">
                     <span className="input-group-text">
-                    <i class="fa fa-users" aria-hidden="true"></i>
+                    <i className="fa fa-users" aria-hidden="true"></i>
                     </span>
                   </div>
                   <select
-                   class="form-control"
+                   className="form-control"
                     name="maLoaiNguoiDung"
                     onChange={handleChangeInput}
                     value={state.values.maLoaiNguoiDung}
