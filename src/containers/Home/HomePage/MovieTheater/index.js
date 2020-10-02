@@ -32,9 +32,9 @@ class MovieTheater extends Component {
             role="tabpanel" 
             aria-labelledby={theaterList.maHeThongRap}>
           <img src={movieLine} />
-          {theaterList.lstCumRap.map((theaterListGroup, i) => {
+          {theaterList.lstCumRap.map((theaterListGroup, theaterListGroupIndex) => {
             return (
-              <div index={i} className="row">
+              <div index={theaterListGroupIndex} className="row">
                 <div className="col-5">
                 <div>{theaterListGroup.tenCumRap}</div>
                 <div>{theaterListGroup.diaChi}</div>

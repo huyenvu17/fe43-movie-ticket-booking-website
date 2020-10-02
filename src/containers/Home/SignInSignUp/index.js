@@ -24,7 +24,7 @@ export default class SignInSignUp extends Component {
       >
         <div className="signin-container" id="container">
           <div className="form-container sign-up-container">
-            <Register/>
+            <Register navigator={this.props}/>
            </div>
           <div className="form-container sign-in-container">
            <SignInForm navigator={this.props}/>
