@@ -1,0 +1,13 @@
+#movieTheater{
+  #movieTheaterTab{
+    background-color: $color-purple-2;
+    .nav-link {
+      margin: 0;
+      
+      img{
+        width: 67px;
+        height: 67px;
+      }
+    }
+  }
+}
