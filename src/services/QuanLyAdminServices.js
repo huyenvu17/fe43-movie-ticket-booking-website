@@ -88,8 +88,16 @@ export class QuanLyAdmin {
   layDanhSachTinTuc = () => {
     return axios({
       url: "https://5f656df5fb1b5700169c9bc4.mockapi.io/tintuc",
-      method: "GET",
+      method: "get",
     });
   };
+  //Thêm Tin Tức
+  themTinTuc = (form)=>{
+    return axios ({
+      url: "https://5f656df5fb1b5700169c9bc4.mockapi.io/tintuc",
+      method: "POST",
+      data: form
+    })
+  }
 }
 export const quanLyAdminService = new QuanLyAdmin();

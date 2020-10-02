@@ -75,7 +75,7 @@ export default class Register extends Component {
           title: "Đăng kí tài khoản Moti",
           icon: "success",
         });
-        navigator.history.push("/login");
+        navigator.history.push("/home");
       })
       .catch((err) => {
         Swal.fire({
