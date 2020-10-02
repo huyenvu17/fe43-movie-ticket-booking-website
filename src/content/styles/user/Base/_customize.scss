@@ -2,7 +2,7 @@
   @include styleText($color-white-0, 2.5em, $fw-bold-0, normal)
 }
 .heading-md {
-  @include styleText($color-white-0, 2em, $fw-bold-0, normal)
+  @include styleText($color-white-0, 1.2em, 400, uppercase)
 }
 .text-normal{
   @include styleText($color-white-0, 1em, 300, normal)
