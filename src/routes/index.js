@@ -4,10 +4,10 @@ import QuanLyPhim from "../containers/Admin/Movie";
 import SignInSignUp from "../containers/Home/SignInSignUp";
 import QuanLyNguoiDung from "../containers/Admin/Users";
 import NewsPage from "../containers/Home/NewsPage";
-import TaoLichChieu from '../containers/Admin/QuanLyLichChieu/TaoLichChieu'
-import ThongKe from "../containers/Admin/ThongKe";
-
-
+import Profile from "../containers/Home/Profile";
+import Admin from "../containers/Admin";
+import QuanLyLichChieu from "../containers/Admin/QuanLyLichChieu";
+import News from "../containers/Admin/News";
 
 const routesHome = [
   {
@@ -30,15 +30,20 @@ const routesHome = [
     path: "/signin",
     component: SignInSignUp,
   },
+  {
+    exact: false,
+    path: "/profile",
+    component: Profile,
+  },
 ];
 const routesAdmin = [
   {
-    exact: true,
+    exact: false,
     path: "/admin",
-    component: ThongKe,
+    component: Admin,
   },
   {
-    exact: true,
+    exact: false,
     path: "/user-management",
     component: UsersManagement,
   },
@@ -55,7 +60,12 @@ const routesAdmin = [
   {
     exact: false,
     path: "/quanLyLichChieu", 
-    component: TaoLichChieu,
+    component: QuanLyLichChieu,
+  },
+  {
+    exact: false,
+    path: "/quanlytintuc", 
+    component: News,
   },
 ];
 export { routesHome, routesAdmin };

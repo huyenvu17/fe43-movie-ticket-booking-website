@@ -2,7 +2,6 @@ import axios from "axios";
 import { domain, token, groupID } from "../Config/config";
 
 export class QuanLyAdmin {
-
   //Service Phim
   themPhim = (form_data) => {
     return axios({
@@ -39,7 +38,7 @@ export class QuanLyAdmin {
       },
     });
   };
- //Service Người Dùng
+  //Service Người Dùng
   layDanhSachNguoiDung = () => {
     return axios({
       url: `${domain}/QuanLyNguoiDung/LayDanhSachNguoiDung?MaNhom=${groupID}`,
@@ -85,6 +84,12 @@ export class QuanLyAdmin {
       },
     });
   };
-
+  //Lấy danh sách tin tức
+  layDanhSachTinTuc = () => {
+    return axios({
+      url: "https://5f656df5fb1b5700169c9bc4.mockapi.io/tintuc",
+      method: "GET",
+    });
+  };
 }
 export const quanLyAdminService = new QuanLyAdmin();

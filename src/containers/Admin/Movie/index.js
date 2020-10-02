@@ -1,11 +1,15 @@
-import React, { Component } from "react";
+import React from 'react'
 import BangPhim from "./BangPhim";
 import ModalThemPhim from "./ModalThemPhim";
-export default class QuanLyPhim extends Component {
-  render() {
-    return (
-       <div>
-         <h1 className="h3 mb-2 text-gray-800">Bảng Phim</h1>
+import { userLogin } from '../../../Config/config'
+export default function QuanLyPhim(props) {
+  const info = JSON.parse(localStorage.getItem(userLogin));
+  if (!localStorage.getItem(userLogin) || info.maLoaiNguoiDung === "KhachHang") {
+    props.history.push("/");
+  }
+  return (
+    <div>
+       <h1 className="h3 mb-2 text-gray-800">Bảng Phim</h1>
                 {/* <p className="mb-4">
                  Bảng Danh sách phim có thể thêm xóa sửa phim 
                 </p> */}
@@ -27,7 +31,6 @@ export default class QuanLyPhim extends Component {
          <BangPhim />
          {/* Modal Thêm Phim */}
         <ModalThemPhim />
-      </div>
-    );
-  }
+    </div>
+  )
 }

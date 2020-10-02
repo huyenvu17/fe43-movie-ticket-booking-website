@@ -1,29 +1,31 @@
-import React, { Component } from "react";
+import React from "react";
 import BangNguoiDung from "./BangNguoiDung";
 import ModalThemNguoiDung from "./ModalThemNguoiDung";
+import {userLogin} from '../../../Config/config';
 
-export default class QuanLyNguoiDung extends Component {
-  render() {
-    return (
-      <div>
-        <div className="row">
-                  <div className="col-md-6 col-xl-12 text-left">
-                    <button
-                      className="btn btn-primary"
-
-                      data-toggle="modal"
-                      data-target="#themNguoiDung"
-                    >
-                      Thêm Người Dùng
-                    </button>
-                  </div>
-                </div>
-        {/* Bảng Người Dùng */}
-        <BangNguoiDung />
-        
-        {/* Modal Thêm  Người Dùng */}
-        <ModalThemNguoiDung />
-      </div>
-    );
+export default function QuanLyNguoiDung(props) {
+  const info = JSON.parse(localStorage.getItem(userLogin));
+  if (!localStorage.getItem(userLogin)|| info.maLoaiNguoiDung === "KhachHang") {
+      props.history.push("/")
   }
+  return (
+    <div>
+      <div className="row">
+        <div className="col-md-6 col-xl-12 text-left">
+          <button
+            className="btn btn-primary"
+            data-toggle="modal"
+            data-target="#themNguoiDung"
+          >
+            Thêm Người Dùng
+          </button>
+        </div>
+      </div>
+      {/* Bảng Người Dùng */}
+      <BangNguoiDung />
+
+      {/* Modal Thêm  Người Dùng */}
+      <ModalThemNguoiDung />
+    </div>
+  );
 }

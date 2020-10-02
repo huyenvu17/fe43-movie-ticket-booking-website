@@ -29,7 +29,7 @@ export default class NavbarAdmin extends Component {
         <li className="nav-item active">
             <NavLink activeClassName="active" className="nav-link" to="/quanlylichchieu">
             <i className="fas fa-chair" aria-hidden="true"></i>
-            <span>Lịch Chiếu</span> 
+            <span>Tin Tức</span> 
            </NavLink>
         </li>
       </ul>
