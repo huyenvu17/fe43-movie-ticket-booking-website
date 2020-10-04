@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import ReactDOM from 'react-dom';
+import ReactDOM from "react-dom";
 import { quanLyPhimServices } from "../../../../services/QuanLyPhimServices";
 import { quanLyAdminService } from "../../../../services/QuanLyAdminServices";
 import SuaPhim from "../ModalSuaPhim";
 import Swal from "sweetalert2";
 import UpLoadHinhAnh from "../UpLoadHinhAnh";
+import { TablePagination } from "@material-ui/core";
 var moment = require("moment");
 
 export default function BangPhim() {
@@ -21,7 +22,8 @@ export default function BangPhim() {
       });
   }, []);
   const renderDanhSachPhim = () => {
-    return danhSachPhim.map((phim, index) => {
+    return danhSachPhim.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+    .map((phim, index) => {
       return (
         <tr tabIndex={-1} key={phim.maPhim}>
           <th scope="row">{phim.maPhim}</th>
@@ -51,7 +53,7 @@ export default function BangPhim() {
                 ></i>
                 <SuaPhim phim={phim} />
               </div>
-              <div className="upload mr-2">
+              <div className="delete mr-2">
                 {/* Sự Kiện Xóa Phim */}
                 <i
                   className="fa fa-trash"
@@ -100,7 +102,7 @@ export default function BangPhim() {
                 ></i>
               </div>
               {/* Sự kiện upload hình ảnh */}
-              <div className="delete mr-2">           
+              <div className="upload mr-2">
                 <i
                   className="fa fa-image"
                   style={{
@@ -118,24 +120,49 @@ export default function BangPhim() {
       );
     });
   };
+
+  //Phân Trang
+  const [page, setPage] = React.useState(0);
+  const [rowsPerPage, setRowsPerPage] = React.useState(5);
+
+  const handleChangePage = (event, newPage) => {
+    setPage(newPage);
+  };
+
+  const handleChangeRowsPerPage = (event) => {
+    setRowsPerPage(parseInt(+event.target.value));
+    setPage(0);
+  };
+
   return (
-    <div className="table-responsive">
-      <table className="table">
-        <thead className="thead-dark">
-          <tr>
-            <th scope="col">Mã Phim</th>
-            <th scope="col">Tên Phim</th>
-            <th scope="col">Hình Ảnh</th>
-            <th scope="col" className="text-center">
-              Nội Dung
-            </th>
-            <th scope="col">Ngày Khởi Chiếu</th>
-            <th scope="col">Đánh giá</th>
-            <th scope="col">Thao Tác</th>
-          </tr>
-        </thead>
-        <tbody>{renderDanhSachPhim()}</tbody>
-      </table>      
-    </div>
+      <div className="table-responsive">
+        <table className="table">
+          <thead className="thead-dark">
+            <tr>
+              <th scope="col">Mã Phim</th>
+              <th scope="col">Tên Phim</th>
+              <th scope="col">Hình Ảnh</th>
+              <th scope="col" className="text-center">
+                Nội Dung
+              </th>
+              <th scope="col">Ngày Khởi Chiếu</th>
+              <th scope="col">Đánh giá</th>
+              <th scope="col">Thao Tác</th>
+            </tr>
+          </thead>
+          <tbody>{renderDanhSachPhim()}</tbody>
+        </table>
+        <TablePagination
+           labelRowsPerPage={"Số Phim Cần Hiển Thị"}
+          rowsPerPageOptions={[5 , 10 , 20 , 50 ,100]}
+          component="div"
+          count={danhSachPhim.length}
+          page={page}
+          rowsPerPage={rowsPerPage}
+          onChangePage={handleChangePage}
+          rowsPerPage={rowsPerPage}
+          onChangeRowsPerPage={handleChangeRowsPerPage}
+        />
+      </div>
   );
 }

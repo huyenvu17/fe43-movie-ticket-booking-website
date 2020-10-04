@@ -92,11 +92,26 @@ export class QuanLyAdmin {
     });
   };
   //Thêm Tin Tức
-  themTinTuc = (form)=>{
-    return axios ({
+  themTinTuc = (tintuc) => {
+    return axios({
       url: "https://5f656df5fb1b5700169c9bc4.mockapi.io/tintuc",
       method: "POST",
-      data: form
+      data: tintuc,
+    });
+  };
+  //Sửa Tin Tức
+  suaTinTuc = (id, tintuc) => {
+    return axios({
+      url: `https://5f656df5fb1b5700169c9bc4.mockapi.io/tintuc/${id}`,
+      method: "PUT",
+      data: tintuc,
+    });
+  };
+  //xóa tin tức 
+  xoaTinTuc = (id)=>{
+    return axios({
+      url:`https://5f656df5fb1b5700169c9bc4.mockapi.io/tintuc/${id}`,
+      method:"DELETE",
     })
   }
 }

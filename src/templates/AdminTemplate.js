@@ -1,69 +1,134 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Route } from "react-router-dom";
 import NavbarAdmin from "../components/NavbarAdmin";
-import '../content/styles/admin/sb-admin-2.scss'
+import "../content/styles/admin/sb-admin-2.scss";
+import { useDispatch, useSelector } from "react-redux";
+import { NavHashLink as NavLink } from "react-router-hash-link";
+import {dangXuatAction} from '../redux/actions/QuanLyNguoiDungAction'
+import { userLogin } from "../Config/config";
+import Grow from "@material-ui/core/Grow";
+import Paper from "@material-ui/core/Paper";
+import ClickAwayListener from "@material-ui/core/ClickAwayListener";
+import Popper from "@material-ui/core/Popper";
+import MenuItem from "@material-ui/core/MenuItem";
+import MenuList from "@material-ui/core/MenuList";
+import { BiLogOut } from 'react-icons/bi';
 function AdminLayout(props) {
+  const [open, setOpen] = React.useState(false);
+  const anchorRef = React.useRef(null);
+
+  const handleToggle = () => {
+    setOpen((prevOpen) => !prevOpen);
+  };
+
+  const handleClose = (event) => {
+    if (anchorRef.current && anchorRef.current.contains(event.target)) {
+      return;
+    }
+    setOpen(false);
+  };
+
+  function handleListKeyDown(event) {
+    if (event.key === "Tab") {
+      event.preventDefault();
+      setOpen(true);
+    }
+  }
+  const taiKhoan = useSelector(
+    (state) => state.QuanLyNguoiDungReducer.taiKhoan
+  );
+
+  const dispatch = useDispatch();
+  const Logout = () => {
+    dispatch(dangXuatAction());
+  };
+
+  const renderLogin = () => {
+    if (taiKhoan) {
+      return (
+        <Fragment>
+          <div
+            className="login_toggle mt-4 ml-5"
+            ref={anchorRef}
+            aria-controls={open ? "menu-list-grow" : undefined}
+            aria-haspopup="true"
+            onClick={handleToggle}
+            style={{ cursor: "pointer",textAlign:"right" }}
+          >
+            <img
+              src="https://www.kindpng.com/picc/m/136-1369892_avatar-people-person-business-user-man-character-avatar.png"
+              height="32"
+              width="32"
+            />
+            <span
+              style={{ fontSize: "13px", color: "white", marginLeft: "5px" }}
+            >
+              {taiKhoan}
+            </span>
+          </div>
+          <Popper
+            open={open}
+            anchorEl={anchorRef.current}
+            role={undefined}
+            transition
+            disablePortal
+          >
+            {({ TransitionProps, placement }) => (
+              <Grow
+                {...TransitionProps}
+                style={{
+                  transformOrigin:
+                    placement === "bottom" ? "center top" : "center bottom",
+                }}
+              >
+                <Paper>
+                  <ClickAwayListener onClickAway={handleClose}>
+                    <MenuList
+                      autoFocusItem={open}
+                      id="menu-list-grow"
+                      onKeyDown={handleListKeyDown}
+                    >                    
+                      <MenuItem onClick={handleClose}>
+                        <NavLink
+                          to="/profile"
+                          style={{ textDecoration: "none", color: "#333" }}
+                        >
+                          <i className="fa fa-user mr-2"></i>
+                          Profile
+                        </NavLink>
+                      </MenuItem>
+                      <MenuItem onClick={Logout}>
+                        <BiLogOut className="mr-2" /> Logout
+                      </MenuItem>
+                    </MenuList>
+                  </ClickAwayListener>
+                </Paper>
+              </Grow>
+            )}
+          </Popper>
+        </Fragment>
+      );
+    }
+    return (
+      <li className="nav-item">
+        <NavLink activeClassName="active" className="nav-link" to="/signin">
+          Đăng Nhâp / Đăng Ký
+        </NavLink>
+      </li>
+    );
+  };
   return (
     <div id="page-top">
       <div id="wrapper">
         <NavbarAdmin />
         <div id="content-wrapper" className="d-flex flex-column">
           <div id="content">
-            <nav className="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-              <button id="sidebarToggleTop" className="btn btn-link d-md-none rounded-circle mr-3">
-                <i className="fa fa-bars" />
-              </button>
-              <form className="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                <div className="input-group">
-                  <input type="text" className="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2" />
-                  <div className="input-group-append">
-                    <button className="btn btn-primary" type="button">
-                      <i className="fas fa-search fa-sm" />
-                    </button>
-                  </div>
-                </div>
-              </form>
-              <ul className="navbar-nav ml-auto">
-                <li className="nav-item dropdown no-arrow d-sm-none">
-                  <a className="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i className="fas fa-search fa-fw" />
-                  </a>
-                  <div className="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
-                    <form className="form-inline mr-auto w-100 navbar-search">
-                      <div className="input-group">
-                        <input type="text" className="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2" />
-                        <div className="input-group-append">
-                          <button className="btn btn-primary" type="button">
-                            <i className="fas fa-search fa-sm" />
-                          </button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </li>
-                  <div className="topbar-divider d-none d-sm-block" />
-                <li className="nav-item dropdown no-arrow">
-                  <a className="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <span className="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
-                    <img className="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60" />
-                  </a>
-                  <div className="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                    <a className="dropdown-item" href="#">
-                      <i className="fas fa-user fa-sm fa-fw mr-2 text-gray-400" />
-                    Profile
-                  </a>
-                    <div className="dropdown-divider" />
-                    <a className="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                      <i className="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400" />
-                    Logout
-                  </a>
-                  </div>
-                </li>
-              </ul>
+          <nav className="navbar navbar-expand navbar-light  bg-gradient-primary  topbar mb-4 static-top shadow">
+            <div style={{display:"flex" , marginLeft:"80%"}}>
+            {renderLogin()}
+            </div>    
             </nav>
-            <div className="container-fluid">
-              {props.children}
-            </div>
+            <div className="container-fluid">{props.children}</div>
           </div>
           <footer className="sticky-footer bg-white">
             <div className="container my-auto">
@@ -75,7 +140,6 @@ function AdminLayout(props) {
         </div>
       </div>
     </div>
-
   );
 }
 export default function AdminTemplate({ Component, ...props }) {

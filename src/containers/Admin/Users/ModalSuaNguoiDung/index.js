@@ -10,7 +10,7 @@ export default function ModalSuaNguoiDung(props) {
       hoTen: user.hoTen,
       taiKhoan: user.taiKhoan,
       matKhau: user.matKhau,
-      email: user.matKhau,
+      email: user.email,
       soDt: user.soDt,
       maLoaiNguoiDung: user.maLoaiNguoiDung,
       maNhom: groupID,
