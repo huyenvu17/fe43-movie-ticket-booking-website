@@ -88,8 +88,31 @@ export class QuanLyAdmin {
   layDanhSachTinTuc = () => {
     return axios({
       url: "https://5f656df5fb1b5700169c9bc4.mockapi.io/tintuc",
-      method: "GET",
+      method: "get",
     });
   };
+  //Thêm Tin Tức
+  themTinTuc = (tintuc) => {
+    return axios({
+      url: "https://5f656df5fb1b5700169c9bc4.mockapi.io/tintuc",
+      method: "POST",
+      data: tintuc,
+    });
+  };
+  //Sửa Tin Tức
+  suaTinTuc = (id, tintuc) => {
+    return axios({
+      url: `https://5f656df5fb1b5700169c9bc4.mockapi.io/tintuc/${id}`,
+      method: "PUT",
+      data: tintuc,
+    });
+  };
+  //xóa tin tức 
+  xoaTinTuc = (id)=>{
+    return axios({
+      url:`https://5f656df5fb1b5700169c9bc4.mockapi.io/tintuc/${id}`,
+      method:"DELETE",
+    })
+  }
 }
 export const quanLyAdminService = new QuanLyAdmin();

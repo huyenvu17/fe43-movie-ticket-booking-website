@@ -3,6 +3,9 @@ import BangLichChieu from "../BangLichChieu";
 import { quanLyPhimServices } from "../../../../services/QuanLyPhimServices";
 import { quanLyAdminService } from "../../../../services/QuanLyAdminServices";
 import Swal from "sweetalert2";
+import { GiFilmProjector, GiSandsOfTime,  } from 'react-icons/gi'
+import { SiCinema4D } from 'react-icons/si'
+import { FaTicketAlt } from 'react-icons/fa'
 export default function TaoLichChieu(props) {
   let [danhSachPhim, setDanhSachPhim] = useState([]);
   useEffect(() => {
@@ -205,7 +208,7 @@ export default function TaoLichChieu(props) {
                 <div className="input-group mt-4 ">
                   <div className="input-group-prepend">
                     <span className="input-group-text">
-                    <i className="fa fa-ticket-alt"></i>
+                   <GiFilmProjector/>
                     </span>
                   </div>
                   <select
@@ -221,7 +224,7 @@ export default function TaoLichChieu(props) {
                 <div className="input-group mt-4 ">
                   <div className="input-group-prepend">
                     <span className="input-group-text">
-                   <i className="fa fa-home" />
+                  <SiCinema4D/>
                     </span>
                   </div>
                   <select
@@ -258,7 +261,7 @@ export default function TaoLichChieu(props) {
                   <div className="input-group">
                     <div className="input-group-prepend">
                       <span className="input-group-text">
-                      <i className="fa fa-calendar-alt"></i>
+                   <GiSandsOfTime/>
                       </span>
                     </div>
                     <input
@@ -275,7 +278,7 @@ export default function TaoLichChieu(props) {
                 <div className="input-group mt-4 ">
                   <div className="input-group-prepend">
                     <span className="input-group-text">
-                    <i className="fa fa-ticket-alt"></i>
+                    <FaTicketAlt/>
                     </span>
                   </div>
                   <select

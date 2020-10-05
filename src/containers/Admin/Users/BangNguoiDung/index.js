@@ -3,6 +3,7 @@ import {} from "../../../../Config/config";
 import { quanLyAdminService } from "../../../../services/QuanLyAdminServices";
 import Swal from "sweetalert2";
 import ModalSuaNguoiDung from "../ModalSuaNguoiDung";
+import { TablePagination } from "@material-ui/core";
 export default function BangNguoiDung() {
   let [danhSachNguoiDung, setDanhSachNguoiDung] = useState([]);
   useEffect(() => {
@@ -16,7 +17,7 @@ export default function BangNguoiDung() {
       });
   }, []);
   const renderDangSachNguoiDung = () => {
-    return danhSachNguoiDung?.map((user, index) => {
+    return danhSachNguoiDung?.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((user, index) => {
       return (
         <tr key={user.taiKhoan}>
           <td>{index + 1}</td>
@@ -40,7 +41,7 @@ export default function BangNguoiDung() {
                 ></i>
                 <ModalSuaNguoiDung user={user} />
               </div>
-              <div className="upload mr-2">
+              <div className="delete mr-2">
                 {/* Sự Kiện Xóa người dùng */}
                 <i
                   className="fa fa-trash"
@@ -91,6 +92,18 @@ export default function BangNguoiDung() {
       );
     });
   };
+   //Phân Trang
+   const [page, setPage] = React.useState(0);
+   const [rowsPerPage, setRowsPerPage] = React.useState(10);
+ 
+   const handleChangePage = (event, newPage) => {
+     setPage(newPage);
+   };
+ 
+   const handleChangeRowsPerPage = (event) => {
+     setRowsPerPage(parseInt(+event.target.value));
+     setPage(0);
+   };
   return (
     <div className="table-responsive">
       <table className="table">
@@ -107,6 +120,17 @@ export default function BangNguoiDung() {
         </thead>
         <tbody>{renderDangSachNguoiDung()}</tbody>
       </table>
+      <TablePagination
+           labelRowsPerPage={"Số Tài Khoản Cần Hiển Thị"}
+          rowsPerPageOptions={[10 , 20 , 50 ,100]}
+          component="div"
+          count={danhSachNguoiDung.length}
+          page={page}
+          rowsPerPage={rowsPerPage}
+          onChangePage={handleChangePage}
+          rowsPerPage={rowsPerPage}
+          onChangeRowsPerPage={handleChangeRowsPerPage}
+        />
     </div>
   );
 }
