@@ -18,7 +18,6 @@ export const getMovieListAxios = () => {
 export const getMovieScheduleAxios = () => {
   return dispatch => {
     quanLyPhimServices.layCumRapTheoHeThong().then(res => {
-      console.log(res.data)
       dispatch(MovieTypes.getMovieTheaterAction(res.data))
     }).catch(error => {
       console.log(error);

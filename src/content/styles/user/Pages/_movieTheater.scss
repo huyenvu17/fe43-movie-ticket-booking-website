@@ -1,4 +1,10 @@
-#movieTheater{
+#movieTheater.theater{
+  .theater__panel{
+    background: #ffffff0d;
+    .theater__panel-tab{
+      padding: 0;
+    }
+  }
   #movieTheaterTab{
     background-color: $color-purple-2;
     .nav-link {
@@ -7,6 +13,21 @@
       img{
         width: 67px;
         height: 67px;
+      }
+    }
+  }
+  #movieTheaterTabContent{
+    .tab-pane{
+      #theaterListGroupTab{
+
+      }
+      #theaterListGroupTabContent{
+        .theater__tabmovie-img{
+          width: 150px;
+          height: 200px;
+          object-fit: cover;
+          border-radius: 5px;
+        }
       }
     }
   }

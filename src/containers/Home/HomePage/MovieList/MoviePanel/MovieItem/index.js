@@ -1,15 +1,16 @@
 import React, { Component } from 'react'
 import { IoIosArrowRoundForward } from "react-icons/io";
+import moment from 'moment';
 export default class MovieItem extends Component {
 
   render() {
-    let {movieItem} = this.props;
+    let { movieItem } = this.props;
     return (
       <div className="row moviepanel__movieitem">
         <div className="col-12 col-md-6 movieitem__info">
           <div className="movieitem__rating"><i className="fa fa-star"></i> <span>{movieItem.danhGia}</span></div>
-    <div className="heading-md">{movieItem.tenPhim}</div>
-          <div className="text-normal">{movieItem.ngayKhoiChieu}</div>
+          <div className="movieitem__title">{movieItem.tenPhim}</div>
+          <div className="text-normal">{moment(movieItem.ngayKhoiChieu).format('DD.MM.YYYY')}</div>
           <div className="text-normal movieitem__desc">{movieItem.moTa}</div>
           <div className="btn-linking">
             <a href="/" >

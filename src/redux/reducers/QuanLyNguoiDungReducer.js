@@ -2,7 +2,7 @@ import { DANG_NHAP, DANG_XUAT } from "../types/QuanLyNguoiDungType";
 
 let taiKhoan = "";
 if (localStorage.getItem("userLogin")) {
-  taiKhoan = JSON.parse(localStorage.getItem("userLogin")).taiKhoan;
+  taiKhoan = JSON.parse(JSON.stringify(localStorage.getItem("userLogin"))).taiKhoan;
 }
 
 const initialState = {

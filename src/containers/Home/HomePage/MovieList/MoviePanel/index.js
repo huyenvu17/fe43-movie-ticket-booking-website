@@ -14,7 +14,6 @@ class MoviePanel extends Component {
     }
   }
   showMovieItemInfo = (movieItemRender) => {
-    console.log(movieItemRender)
     this.setState({movieItem: movieItemRender})
   }
   renderMovieItem = () =>{
@@ -22,8 +21,6 @@ class MoviePanel extends Component {
       return (
         <div className="slider__item" key={index} onClick={() => this.showMovieItemInfo(movieItem)}>
             <img src={movieItem.hinhAnh} className="img-fluid" alt={movieItem.hinhAnh}/>
-             <div>{movieItem.tenPhim}</div>
-             <div>{moment(movieItem.ngayKhoiChieu).format("yyyy")}</div>
         </div>
       )
     })

@@ -46,7 +46,7 @@ export default function Navbar(props) {
 
   const renderMenu = () => {
     if (
-      JSON.parse(localStorage.getItem(userLogin)).maLoaiNguoiDung === "QuanTri"
+      JSON.parse(JSON.stringify(localStorage.getItem(userLogin))).maLoaiNguoiDung === "QuanTri"
     ) {
       return (
         <MenuItem onClick={handleClose}>
