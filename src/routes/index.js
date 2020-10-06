@@ -4,10 +4,10 @@ import QuanLyPhim from "../containers/Admin/Movie";
 import SignInSignUp from "../containers/Home/SignInSignUp";
 import QuanLyNguoiDung from "../containers/Admin/Users";
 import NewsPage from "../containers/Home/NewsPage";
-import Profile from "../containers/Home/Profile";
 import Admin from "../containers/Admin";
 import QuanLyLichChieu from "../containers/Admin/QuanLyLichChieu";
 import News from "../containers/Admin/News";
+import UserInfo from "../containers/UserInfo";
 
 const routesHome = [
   {
@@ -33,7 +33,7 @@ const routesHome = [
   {
     exact: false,
     path: "/profile",
-    component: Profile,
+    component: UserInfo,
   },
 ];
 const routesAdmin = [

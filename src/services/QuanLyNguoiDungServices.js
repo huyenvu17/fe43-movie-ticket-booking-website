@@ -15,5 +15,19 @@ export class QuanLyNguoiDung {
       data: thongTin,
     });
   };
+  layThongTinTaiKhoan = (taiKhoan) => {
+    return axios({
+      url: `${domain}/QuanLyNguoiDung/ThongTinTaiKhoan`,
+      method: "POST",
+      data: taiKhoan,
+    });
+  };
+  thongTinTaiKhoan = (taiKhoan) => {
+    return axios({
+      url: `${domain}/QuanLyNguoiDung/ThongTinTaiKhoan`,
+      method: "POST",
+      data: taiKhoan,
+    });
+  };
 }
 export const quanLyNguoiDung = new QuanLyNguoiDung();
