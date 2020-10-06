@@ -74,7 +74,7 @@ export default function BangNguoiDung() {
                           })
                           .catch((err) => {
                             Swal.fire({
-                              title: "Xóa Phim không thành công",
+                              title: "Xóa Người Dùng không thành công",
                               icon: "error",
                             });
                           });
