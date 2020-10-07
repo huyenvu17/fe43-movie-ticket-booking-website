@@ -75,7 +75,7 @@ export default function UserInfo() {
             <div className="row">
               <div className="col-md-4 col-12 col-left bg-dark text-center">
                 <h4>Thông Tin Cá Nhân</h4>
-                <table class="table bg-light">
+                <table className="table bg-light">
                   <tbody>
                     {renderInfo()}
                   </tbody>

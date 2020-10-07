@@ -28,15 +28,15 @@ export default function BookingInfo(props) {
   return (
     <div style={{ marginTop: "35px" }}>
       <div id="accordion">
-        <div class="card">
-          <div class="card-header" id="headingOne">
-            <h5 class="mb-0">
+        <div className="card">
+          <div className="card-header" id="headingOne">
+            <h5 className="mb-0">
               <button
-                class="btn btn-light collapsed"
+                className="btn btn-light collapsed"
                 data-toggle="collapse"
-                data-target="#collapseOne"
+                data-target="#collapseTwo"
                 aria-expanded="true"
-                aria-controls="collapseOne"
+                aria-controls="collapseTwo"
               >
                 Lịch Sử Đặt Vé
               </button>
@@ -44,12 +44,12 @@ export default function BookingInfo(props) {
           </div>
 
           <div
-            id="collapseOne"
-            class="collapse "
+            id="collapseTwo"
+            className="collapse "
             aria-labelledby="headingOne"
             data-parent="#accordion"
           >
-            <div class="card-body bg-light">
+            <div className="card-body bg-light">
               <table className="table table-bordered">
                 <thead>
                   <tr>

@@ -54,8 +54,8 @@ class MovieTheater extends Component {
                               <img src={movieScheduleList.hinhAnh} className="theater__tabmovie-img" />
                               <div>{movieScheduleList.tenPhim}</div>
                               <div>
-                                {movieScheduleList.lstLichChieuTheoPhim.map((movieScheduleItem, movieScheduleItemIndex) => {
-                                  let ngayChieuFormat = moment(movieScheduleItem.ngayChieuGioChieu).format('DD-MM-YYYY');
+                                {movieScheduleList.lstLichChieuTheoPhim?.slice(0,5).map((movieScheduleItem, movieScheduleItemIndex) => {
+                                  let ngayChieuFormat = moment(movieScheduleItem.ngayChieuGioChieu).format('hh:mm A');
                                   return (
                                     <NavLink className="col-3" key={movieScheduleItemIndex} to={`/bookingTicket/${movieScheduleItem.maLichChieu}`}>{ngayChieuFormat}</NavLink>
                                   )

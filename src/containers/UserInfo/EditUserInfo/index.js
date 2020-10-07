@@ -124,11 +124,11 @@ export default function EditUser() {
   return (
     <div style={{ marginTop: "35px" }}>
       <div id="accordion">
-        <div class="card">
-          <div class="card-header" id="headingOne">
-            <h5 class="mb-0">
+        <div className="card">
+          <div className="card-header" id="headingOne">
+            <h5 className="mb-0">
               <button
-                class="btn btn-light collapsed"
+                className="btn btn-light collapsed"
                 data-toggle="collapse"
                 data-target="#collapseOne"
                 aria-expanded="true"
@@ -141,12 +141,35 @@ export default function EditUser() {
 
           <div            
             id="collapseOne"
-            class="collapse "
+            className="collapse "
             aria-labelledby="headingOne"
             data-parent="#accordion"
           >
-            <div class="card-body bg-light">
+            <div className="card-body bg-light">
               <form onSubmit={handleSubmit}>
+              <div className="form-group">
+                  <div className="input-group">
+                    <div className="input-group-prepend">
+                      <span className="input-group-text">
+                        <i className="fa fa-id-badge"></i>
+                      </span>
+                    </div>
+                    <input
+                      type="text"
+                      name="taiKhoan"
+                      className="form-control input-sm"
+                      placeholder="Nhập Tài Khoản"
+                      value={state.values.taiKhoan}
+                      onChange={handleInput}
+                      disabled
+                      required
+                    />
+                  </div>
+                  <span className="text-danger" id="tbTaiKhoan">
+                    {state.errors.taiKhoan}
+                  </span>
+                </div>
+               
                 <div className="form-group">
                   <div className="input-group">
                     <div className="input-group-prepend">
@@ -168,28 +191,7 @@ export default function EditUser() {
                     {state.errors.hoTen}
                   </span>
                 </div>
-                <div className="form-group">
-                  <div className="input-group">
-                    <div className="input-group-prepend">
-                      <span className="input-group-text">
-                        <i className="fa fa-id-badge"></i>
-                      </span>
-                    </div>
-                    <input
-                      type="text"
-                      name="taiKhoan"
-                      className="form-control input-sm"
-                      placeholder="Nhập Tài Khoản"
-                      value={state.values.taiKhoan}
-                      onChange={handleInput}
-                      required
-                    />
-                  </div>
-                  <span className="text-danger" id="tbTaiKhoan">
-                    {state.errors.taiKhoan}
-                  </span>
-                </div>
-                <div className="form-group">
+               <div className="form-group">
                   <div className="input-group">
                     <div className="input-group-prepend">
                       <span className="input-group-text">
