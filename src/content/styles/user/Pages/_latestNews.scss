@@ -1,12 +1,24 @@
-.latestNews{
+.latestnews{
+  margin: 3em auto;
+  .heading-md{
+    margin-bottom: 0.5em;
+  }
   .latestnews__wrapper{
     .latestnews__newsitem{
+      margin: 0.5em auto;
+      cursor: pointer;
       .newsitem__img {
         width: 100%;
         height: 175px;
         border-radius: 15px 15px 0 0;
-        object-fit: fill;
+        object-fit: cover;
       }
+      .newsitem__intro {
+        color: #fff;
+        padding: 15px 10px;
+        background: #ffffff1f;
+        border-radius: 0 0 15px 15px;
+    }
     }
   }
 }

@@ -1,5 +1,5 @@
-import * as MovieTypes from '../types/QuanLyPhimType';
-import * as MovieConst from '../constants/movieContants';
+import * as MovieTypes from 'redux/types/QuanLyPhimType';
+import * as MovieConst from 'redux/constants/movieContants';
 const statePhim = {
   suaPhim: {
     biDanh: "what-s-wrong-with-secretary-kimm",

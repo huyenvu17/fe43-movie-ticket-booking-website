@@ -1,8 +1,5 @@
-import * as MovieTypes from '../types/QuanLyPhimType';
-import * as MovieConstants from '../constants/movieContants';
-import { quanLyPhimServices } from '../../services/QuanLyPhimServices'
-import axios from 'axios';
-import { result } from 'lodash';
+import * as MovieTypes from 'redux/types/QuanLyPhimType';
+import { quanLyPhimServices } from 'services/QuanLyPhimServices'
 export const xemChiTietAction = (maPhim) => {
   return { type: MovieTypes.XEM_CHI_TIET, maPhim };
 };
