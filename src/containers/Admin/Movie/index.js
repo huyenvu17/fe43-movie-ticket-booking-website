@@ -1,7 +1,7 @@
 import React from 'react'
 import BangPhim from "./BangPhim";
 import ModalThemPhim from "./ModalThemPhim";
-import { userLogin } from '../../../Config/config'
+import { userLogin } from 'Config/config'
 export default function QuanLyPhim(props) {
   const info = JSON.parse(localStorage.getItem(userLogin));
   if (!localStorage.getItem(userLogin) || info.maLoaiNguoiDung === "KhachHang") {

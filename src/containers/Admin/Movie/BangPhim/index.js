@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
-import { quanLyPhimServices } from "../../../../services/QuanLyPhimServices";
-import { quanLyAdminService } from "../../../../services/QuanLyAdminServices";
+import { quanLyPhimServices } from "services/QuanLyPhimServices";
+import { quanLyAdminService } from "services/QuanLyAdminServices";
 import SuaPhim from "../ModalSuaPhim";
 import Swal from "sweetalert2";
 import UpLoadHinhAnh from "../UpLoadHinhAnh";

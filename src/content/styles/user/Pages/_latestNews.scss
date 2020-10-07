@@ -1,7 +1,12 @@
 .latestNews{
   .latestnews__wrapper{
-    .latestnews__item{
-      
+    .latestnews__newsitem{
+      .newsitem__img {
+        width: 100%;
+        height: 175px;
+        border-radius: 15px 15px 0 0;
+        object-fit: fill;
+      }
     }
   }
 }

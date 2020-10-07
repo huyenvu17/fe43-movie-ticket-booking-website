@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
-import { groupID } from "../../../../Config/config";
-import { quanLyAdminService } from "../../../../services/QuanLyAdminServices";
+import { groupID } from "Config/config";
+import { quanLyAdminService } from "services/QuanLyAdminServices";
 
 export default function SuaPhim(props) {
   let { phim } = props;

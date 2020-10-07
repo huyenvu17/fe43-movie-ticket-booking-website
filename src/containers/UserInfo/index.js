@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, Redirect } from "react-router-dom";
-import { userLogin } from "../../Config/config";
-import { quanLyNguoiDung } from "../../services/QuanLyNguoiDungServices";
+import { userLogin } from "Config/config";
+import { quanLyNguoiDung } from "services/QuanLyNguoiDungServices";
 import BookingInfo from "./BookingInfo";
 import EditUser from "./EditUserInfo";
 export default function UserInfo() {

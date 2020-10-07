@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { groupID } from "../../../../Config/config";
+import { groupID } from "Config/config";
 import Swal from "sweetalert2";
-import { quanLyAdminService } from "../../../../services/QuanLyAdminServices";
+import { quanLyAdminService } from "services/QuanLyAdminServices";
 
 export default function UpLoadHinhAnh(props) {
   let { phim } = props;

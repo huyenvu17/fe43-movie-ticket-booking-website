@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { groupID } from "../../../../Config/config";
-import { quanLyNguoiDung } from "../../../../services/QuanLyNguoiDungServices";
+import { groupID } from "Config/config";
+import { quanLyNguoiDung } from "services/QuanLyNguoiDungServices";
 import Swal from "sweetalert2";
 export default class Register extends Component {
   state = {

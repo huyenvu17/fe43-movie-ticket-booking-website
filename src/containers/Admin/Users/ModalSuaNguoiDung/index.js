@@ -1,6 +1,6 @@
 import React, { Component, useState } from "react";
-import { quanLyAdminService } from "../../../../services/QuanLyAdminServices";
-import { groupID } from "../../../../Config/config";
+import { quanLyAdminService } from "services/QuanLyAdminServices";
+import { groupID } from "Config/config";
 import Swal from "sweetalert2";
 
 export default function ModalSuaNguoiDung(props) {

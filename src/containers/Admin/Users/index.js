@@ -1,7 +1,7 @@
 import React from "react";
 import BangNguoiDung from "./BangNguoiDung";
 import ModalThemNguoiDung from "./ModalThemNguoiDung";
-import {userLogin} from '../../../Config/config';
+import {userLogin} from 'Config/config';
 
 export default function QuanLyNguoiDung(props) {
   const info = JSON.parse(localStorage.getItem(userLogin));

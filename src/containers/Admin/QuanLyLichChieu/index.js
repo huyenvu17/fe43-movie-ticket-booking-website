@@ -1,6 +1,6 @@
 import React from "react";
 import TaoLichChieu from "./TaoLichChieu";
-import { userLogin } from "../../../Config/config";
+import { userLogin } from "Config/config";
 
 export default function QuanLyLichChieu(props) {
   const info = JSON.parse(localStorage.getItem(userLogin));

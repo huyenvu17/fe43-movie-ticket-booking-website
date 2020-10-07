@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import BangLichChieu from "../BangLichChieu";
-import { quanLyPhimServices } from "../../../../services/QuanLyPhimServices";
-import { quanLyAdminService } from "../../../../services/QuanLyAdminServices";
+import { quanLyPhimServices } from "services/QuanLyPhimServices";
+import { quanLyAdminService } from "services/QuanLyAdminServices";
 import Swal from "sweetalert2";
 import { GiFilmProjector, GiSandsOfTime,  } from 'react-icons/gi'
 import { SiCinema4D } from 'react-icons/si'

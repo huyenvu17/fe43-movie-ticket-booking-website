@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
-import MotiLogo from '../../content/images/logo/moti-logo-white.svg';
+import MotiLogo from 'content/images/logo/moti-logo-white.svg';
 export default class NavbarAdmin extends Component {
   render() {
     return (

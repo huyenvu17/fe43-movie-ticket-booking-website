@@ -1,6 +1,6 @@
 import { event } from "jquery";
 import React, { useState } from "react";
-import { quanLyAdminService } from "../../../../services/QuanLyAdminServices";
+import { quanLyAdminService } from "services/QuanLyAdminServices";
 import Swal from "sweetalert2";
 import { MdDateRange, MdTitle } from 'react-icons/md';
 import { BsBook } from 'react-icons/bs';

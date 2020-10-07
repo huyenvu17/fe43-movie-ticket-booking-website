@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {connect} from 'react-redux';
-import * as movieAction from '../../../../redux/actions/QuanLyPhimAction';
-import movieLine from '../../../../content/images/illustrations/movie-lines.svg';
+import * as movieAction from 'redux/actions/QuanLyPhimAction';
+import movieLine from 'content/images/illustrations/movie-lines.svg';
 import { NavLink } from 'react-router-dom';
 import moment from 'moment';
 import {Tab, Nav} from 'react-bootstrap';
-import * as config from '../../../../Config/config'
+import * as config from 'Config/config'
 class MovieTheater extends Component {
  
   renderTheaterLogo = (theaterList) => {

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { groupID } from "../../../../Config/config";
-import { quanLyAdminService } from "../../../../services/QuanLyAdminServices";
+import { groupID } from "Config/config";
+import { quanLyAdminService } from "services/QuanLyAdminServices";
 import Swal from "sweetalert2";
 
 export default class ModalThemNguoiDung extends Component {

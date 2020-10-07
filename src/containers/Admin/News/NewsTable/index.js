@@ -1,7 +1,7 @@
 import { TablePagination } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import Swal from "sweetalert2";
-import { quanLyAdminService } from "../../../../services/QuanLyAdminServices";
+import { quanLyAdminService } from "services/QuanLyAdminServices";
 import AddNew from "../../News/AddNews";
 import EditNews from "../EditNews";
 var moment = require("moment");

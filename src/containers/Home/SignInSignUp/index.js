@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import "../../../content/styles/user/signinsignup.css";
+import "content/styles/user/signinsignup.css";
 import Register from "./Register";
-import { userLogin } from "../../../Config/config";
-import SignInForm from "./SignIn/SignInForm";
+import { userLogin } from "Config/config";
+import SignInForm from "./SignIn";
 export default class SignInSignUp extends Component {
   constructor(props) {
     super(props);

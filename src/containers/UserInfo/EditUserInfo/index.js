@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { userLogin } from "../../../Config/config";
-import { quanLyAdminService } from "../../../services/QuanLyAdminServices";
-import { quanLyNguoiDung } from "../../../services/QuanLyNguoiDungServices";
+import { userLogin } from "Config/config";
+import { quanLyAdminService } from "services/QuanLyAdminServices";
+import { quanLyNguoiDung } from "services/QuanLyNguoiDungServices";
 import Swal from "sweetalert2";
 export default function EditUser() {
   const infoUser = JSON.parse(localStorage.getItem(userLogin));

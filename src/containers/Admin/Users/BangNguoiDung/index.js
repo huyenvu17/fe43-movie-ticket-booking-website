@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import {} from "../../../../Config/config";
-import { quanLyAdminService } from "../../../../services/QuanLyAdminServices";
+import {} from "Config/config";
+import { quanLyAdminService } from "services/QuanLyAdminServices";
 import Swal from "sweetalert2";
 import ModalSuaNguoiDung from "../ModalSuaNguoiDung";
 import { TablePagination } from "@material-ui/core";

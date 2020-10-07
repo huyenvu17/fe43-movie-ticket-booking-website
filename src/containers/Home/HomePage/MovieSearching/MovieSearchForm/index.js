@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { quanLyPhimServices } from "../../../../../services/QuanLyPhimServices";
+import { quanLyPhimServices } from "services/QuanLyPhimServices";
 var moment = require("moment");
 export default function MovieSearchForm(props) {
   //Lưu trữ local state

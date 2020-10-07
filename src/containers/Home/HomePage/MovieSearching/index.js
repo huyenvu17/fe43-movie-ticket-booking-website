@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import MotiIllustration from '../../../../content/images/illustrations/movie-illustration.svg';
+import MotiIllustration from 'content/images/illustrations/movie-illustration.svg';
 import MovieSearchForm from './MovieSearchForm';
 export default class MovieSearching extends Component {
   render() {

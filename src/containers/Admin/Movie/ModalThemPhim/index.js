@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Swal from "sweetalert2";
-import { quanLyAdminService } from "../../../../services/QuanLyAdminServices";
+import { quanLyAdminService } from "services/QuanLyAdminServices";
 
 export default class ModalThemPhim extends Component {
   state = {

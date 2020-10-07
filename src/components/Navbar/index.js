@@ -1,11 +1,11 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import MotiLogo from "../../content/images/logo/moti-logo-white.svg";
-import "../../content/styles/user/components/_menu.scss";
+import MotiLogo from "content/images/logo/moti-logo-white.svg";
+import "content/styles/user/components/_menu.scss";
 import { NavHashLink as NavLink } from "react-router-hash-link";
-import {dangXuatAction} from '../../redux/actions/QuanLyNguoiDungAction'
-import { userLogin } from "../../Config/config";
+import {dangXuatAction} from 'redux/actions/QuanLyNguoiDungAction'
+import { userLogin } from "Config/config";
 import Grow from "@material-ui/core/Grow";
 import Paper from "@material-ui/core/Paper";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
