@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import * as newsAction from 'redux/actions/QuanLyTinTucAction';
-import {
-  Link
-} from "react-router-dom";
+import {Link} from "react-router-dom";
 class LatestNews extends Component {
   constructor(props){
     super(props);

@@ -11,8 +11,6 @@ class MoviePanel extends Component {
     super(props);
     this.state = {
       movieItem: {},
-      activeSlide: 0,
-      activeSlide2: 0
     }
   }
   showMovieItemInfo = (movieItemRender) => {
@@ -71,9 +69,7 @@ class MoviePanel extends Component {
     return (
       <div className="moviepanel">
         <div className="container">
-          {this.state.currentSlide &&
-            <MovieItem movieItem={this.state.movieItem} />
-          }
+        <MovieItem movieItem={this.state.movieItem} />
         </div>
         <div className="row moviepanel__slider">
           <div className="container">

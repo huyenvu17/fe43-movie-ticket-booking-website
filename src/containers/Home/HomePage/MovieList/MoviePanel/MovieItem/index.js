@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { IoIosArrowRoundForward } from "react-icons/io";
 import moment from 'moment';
+import {Link} from "react-router-dom";
 export default class MovieItem extends Component {
 
   render() {
@@ -13,10 +14,10 @@ export default class MovieItem extends Component {
           <div className="text-normal">{moment(movieItem.ngayKhoiChieu).format('DD.MM.YYYY')}</div>
           <div className="text-normal movieitem__desc">{movieItem.moTa}</div>
           <div className="btn-linking">
-            <a href="/" >
+            <Link to={`/movie-detail/${movieItem.maPhim}`} >
               <span>chi tiết</span>
               <IoIosArrowRoundForward />
-            </a>
+            </Link>
           </div>
         </div>
         <div className="col-12 col-md-6 movieitem__trailer">

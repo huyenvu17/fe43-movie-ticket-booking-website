@@ -9,6 +9,7 @@ import QuanLyLichChieu from "containers/Admin/QuanLyLichChieu";
 import News from "containers/Admin/News";
 import UserInfo from "containers/UserInfo";
 import NewsDetail from "containers/Home/HomePage/LastestNews/NewsDetail";
+import MovieDetail from "containers/Home/HomePage/MovieList/MovieDetail";
 
 const routesHome = [
   {
@@ -25,6 +26,11 @@ const routesHome = [
     exact: false,
     path: "/news",
     component: NewsPage,
+  },  
+  {
+    exact: false,
+    path: "/movie-detail/:maPhim",
+    component: MovieDetail,
   },  
   {
     exact: false,

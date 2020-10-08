@@ -20,7 +20,7 @@ class NewsDetail extends Component {
         return (
             <div className="newsdetail">
                 <div className="container">
-                    <h1>{nesDetail.tieuDe}</h1>
+                    <h2>{nesDetail.tieuDe}</h2>
                     <div className="newsdetail__credit"><span>{nesDetail.nguoiDang}</span> | <span>{nesDetail.ngayDang}</span></div>
                     <div className="newsdetail__statistics"><span className="statistics_likes">{nesDetail.likes} <i class="fas fa-thumbs-up"></i> </span>  <span className="statistics_shares"> {nesDetail.shares} <i class="fas fa-share-alt"></i> </span></div>
                     <Zoom wrapElement="div">
