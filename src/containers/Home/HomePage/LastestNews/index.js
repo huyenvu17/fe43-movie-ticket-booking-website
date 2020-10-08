@@ -15,14 +15,13 @@ class LatestNews extends Component {
     this.props.dispatch(newsAction.getNewsListAxios());
   }
   render() {
-    console.log(this.props.newsList)
     return (
       <div className="container latestnews" id="latestNews">
         <div className="heading-md">tin tức điện ảnh</div>
         <div className="row latestnews__wrapper">
           {this.props.newsList.map((newsItem)=>{
             return(
-              <Link className="col-6 col-sm-4 latestnews__newsitem" key={newsItem.id}>
+              <Link className="col-6 col-sm-4 latestnews__newsitem" key={newsItem.id} to={`/news-detail/${newsItem.id}`}>
               <img src={newsItem.hinhAnh1} className="newsitem__img" />
               <div className="newsitem__intro">
                 <div>{newsItem.ngayDang}</div>

@@ -1,13 +1,14 @@
-import HomePage from "../containers/Home/HomePage";
-import UsersManagement from "../containers/Admin/Users";
-import QuanLyPhim from "../containers/Admin/Movie";
-import SignInSignUp from "../containers/Home/SignInSignUp";
-import QuanLyNguoiDung from "../containers/Admin/Users";
-import NewsPage from "../containers/Home/NewsPage";
-import Admin from "../containers/Admin";
-import QuanLyLichChieu from "../containers/Admin/QuanLyLichChieu";
-import News from "../containers/Admin/News";
-import UserInfo from "../containers/UserInfo";
+import HomePage from "containers/Home/HomePage";
+import UsersManagement from "containers/Admin/Users";
+import QuanLyPhim from "containers/Admin/Movie";
+import SignInSignUp from "containers/Home/SignInSignUp";
+import QuanLyNguoiDung from "containers/Admin/Users";
+import NewsPage from "containers/Home/NewsPage";
+import Admin from "containers/Admin";
+import QuanLyLichChieu from "containers/Admin/QuanLyLichChieu";
+import News from "containers/Admin/News";
+import UserInfo from "containers/UserInfo";
+import NewsDetail from "containers/Home/HomePage/LastestNews/NewsDetail";
 
 const routesHome = [
   {
@@ -24,6 +25,11 @@ const routesHome = [
     exact: false,
     path: "/news",
     component: NewsPage,
+  },  
+  {
+    exact: false,
+    path: "/news-detail/:id",
+    component: NewsDetail,
   },  
   {
     exact: false,
