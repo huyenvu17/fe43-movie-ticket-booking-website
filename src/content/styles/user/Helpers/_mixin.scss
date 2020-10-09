@@ -4,6 +4,12 @@
   font-weight: $fontWeight;
   text-transform: $text-transform;
 }
+@mixin textStyle($fs, $fw, $color) {
+  font-size: $fs;
+  font-weight: $fw;
+  color: $color;
+}
+
 @mixin styleButton($bg-color, $border-color, $pd-y, $pd-x, $border-radius, $text-transform) {
   background-color: $bg-color;
   border: 1px solid $border-color;

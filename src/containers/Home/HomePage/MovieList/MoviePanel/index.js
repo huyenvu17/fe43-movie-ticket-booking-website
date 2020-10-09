@@ -28,7 +28,7 @@ class MoviePanel extends Component {
     })
   }
   render() {
-    let settings = {
+    var settings = {
       dots: false,
       infinite: true,
       centerMode: true,
@@ -37,6 +37,8 @@ class MoviePanel extends Component {
       centerPadding: '10px',
       speed: 500,
       slidesToShow: 5,
+      autoplay: true,
+      autoplaySpeed: 7000,
       slidesToScroll: 1,
       responsive: [
         {

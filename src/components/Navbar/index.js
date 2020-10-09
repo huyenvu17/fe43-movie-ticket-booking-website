@@ -12,7 +12,7 @@ import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 import Popper from "@material-ui/core/Popper";
 import MenuItem from "@material-ui/core/MenuItem";
 import MenuList from "@material-ui/core/MenuList";
-import { BiLogOut } from 'react-icons/bi';
+import { BiFilm, BiLogOut } from 'react-icons/bi';
 
 export default function Navbar(props) {
   const [open, setOpen] = React.useState(false);
@@ -147,13 +147,14 @@ export default function Navbar(props) {
         <div className="collapse navbar-collapse" id="collapsibleNavbar">
           <ul className="nav navbar-nav ml-auto menu__links">
             <li className="nav-item">
+            
               <NavLink
                 exact
                 activeClassName="active"
                 className="nav-link"
-                to="/#movieList"
-              >
-                Lịch Chiếu
+                to="/movieall"
+              >                    
+                 Phim
               </NavLink>
             </li>
             <li className="nav-item">

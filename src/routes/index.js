@@ -8,6 +8,7 @@ import Admin from "../containers/Admin";
 import QuanLyLichChieu from "../containers/Admin/QuanLyLichChieu";
 import News from "../containers/Admin/News";
 import UserInfo from "../containers/UserInfo";
+import MovieAll from "containers/Home/HomePage/MovieAll";
 
 const routesHome = [
   {
@@ -24,6 +25,11 @@ const routesHome = [
     exact: false,
     path: "/news",
     component: NewsPage,
+  },  
+  {
+    exact: false,
+    path: "/movieall",
+    component: MovieAll,
   },  
   {
     exact: false,
