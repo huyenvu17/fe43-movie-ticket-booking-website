@@ -1,0 +1,53 @@
+.footer{
+  padding: 5em 0;
+  background-color: $color-purple-0;
+  color: white;
+  .footer__left{
+    text-align: left;
+    .footer__left_copyright{
+      color: $color-purple-1;
+    }
+    .footer__left__content{
+      margin: 0.5em 0;
+    }
+  }
+  .footer__right{
+    text-align: right;
+    .footer__right__icons {
+      margin-top: 5px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      i {
+        margin-left: 0.5em;
+        font-size: 2.5em;
+        transition: all ease 0.3s;
+      }
+      .fb{
+        &:hover{
+          color: $color-fb;
+        }
+      }
+      .twt{
+        font-size: 2.6em;
+        margin-left: 0.6em;
+        &:hover{
+          color: $color-twitter;
+        }
+      }
+      .google{
+        font-size: 3em;
+        &:hover{
+          color: $color-google;
+        }
+      }
+    }
+  }
+}
+@include responsive("small") {
+  .footer {
+    .footer__right, .footer__left{
+      text-align: center;
+    }
+  }
+}
