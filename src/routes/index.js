@@ -10,6 +10,7 @@ import News from "containers/Admin/News";
 import UserInfo from "containers/UserInfo";
 import NewsDetail from "containers/Home/HomePage/LastestNews/NewsDetail";
 import MovieDetail from "containers/Home/HomePage/MovieList/MovieDetail";
+import MovieAll from "containers/Home/HomePage/MovieAll";
 
 const routesHome = [
   {
@@ -31,9 +32,13 @@ const routesHome = [
     exact: false,
     path: "/movieall",
     component: MovieAll,
+   
+  },
+  {
+    exact: false,
     path: "/movie-detail/:maPhim",
     component: MovieDetail,
-  },  
+  },   
   {
     exact: false,
     path: "/news-detail/:id",
