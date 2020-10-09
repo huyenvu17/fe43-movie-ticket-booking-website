@@ -9,6 +9,12 @@ export class QuanLyPhimServices {
       method: "GET",
     });
   };
+  layChiTietPhim = (maPhim) => {
+    return axios({
+      url: `${domain}/QuanLyPhim/LayThongTinPhim?MaPhim=${maPhim}`,
+      method: "GET",
+    });
+  };
   layThongTinPhim = (maPhim) => {
     return axios({
       url: `${domain}/QuanLyRap/LayThongTinLichChieuPhim?MaPhim=${maPhim}`,

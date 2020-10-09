@@ -1,3 +1,6 @@
+button{
+  outline: none!important;
+}
 .btn.btn-solid-dark{
   outline: none;
   @include styleButton($color-purple-0, $color-purple-0, 6px, 12px, 6px, $tf-uppercase);

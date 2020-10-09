@@ -4,6 +4,10 @@ export const getMovieListAction = (movieList) => ({
   type: MovieConst.GET_MOVIE_LIST,
   movieList
 })
+export const getMovieDetailAction = (movieDetail) => ({
+  type: MovieConst.GET_MOVIE_DETAIL,
+  movieDetail
+})
 export const getMovieTheaterAction = (movieTheater) => ({
   type: MovieConst.GET_MOVIE_THEATER,
   movieTheater
