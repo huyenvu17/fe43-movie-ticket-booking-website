@@ -9,22 +9,43 @@
     background-color: $color-purple-2;
     .nav-link {
       margin: 0;
-      
+      display: flex;
+      border-radius: 10px 0 0 10px;
+      align-items: center;
+      color: $color-purple-1;
+      font-size: 1.125em;
+      transition: all 0.4s;
       img{
         width: 67px;
         height: 67px;
+        margin-right: 10px;
       }
+    }
+    .nav-link.active{
+      color: #fff;
+      background-color: #602080;
+      border-radius: initial;
+      font-weight: 600;
     }
   }
   #movieTheaterTabContent{
     .tab-pane{
       #theaterListGroupTab{
-
+        .nav-item{
+          transition: all 0.4s;
+          .nav-link{
+            background-color: transparent;
+            color: #602080;
+          }
+          .nav-link.active{
+            color: #fff;
+          }
+        }
       }
       #theaterListGroupTabContent{
         .theater__tabmovie-img{
-          width: 150px;
-          height: 200px;
+          width: 50px;
+          height: 50px;
           object-fit: cover;
           border-radius: 5px;
         }

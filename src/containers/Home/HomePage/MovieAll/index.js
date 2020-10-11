@@ -41,14 +41,14 @@ export default function MovieAll() {
               <div className="content-left">
                 <div className="left-header-movie">
                   <h1 className="movie-name">{phim.tenPhim}</h1>
-                  <h4 className="group-id">{phim.maNhom}</h4>
-                  <p className="during-time">120 phút</p>
+                  {/* <h4 className="group-id">{phim.maNhom}</h4> */}
+                  <p className="during-time">120 phút | </p>
                   <p className="date-time">
                     {moment(phim.ngayKhoiChieu).format("DD-MM-yyyy")}
                   </p>
-                </div>
-                <div className="below-header">
+                  <div className="below-header">
                   <p className="description">{phim.moTa}</p>
+                </div>
                 </div>
               </div>
               <LazyLoad throttle={200}>

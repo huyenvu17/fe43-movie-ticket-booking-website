@@ -16,7 +16,6 @@ class NewsDetail extends Component {
     }
     render() {
         let nesDetail = this.props.newsDetail;
-        console.log(this.props.newsDetail)
         return (
             <div className="newsdetail">
                 <div className="container">

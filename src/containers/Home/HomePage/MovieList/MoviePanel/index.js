@@ -4,7 +4,8 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import {connect} from 'react-redux';
 import * as movieAction from 'redux/actions/QuanLyPhimAction';
-import MovieItem from './MovieItem';
+import MovieTrailer from "../../MovieTrailer";
+import { NavLink } from "react-router-dom";
 var moment = require('moment');
 class MoviePanel extends Component {
   constructor(props){
@@ -13,31 +14,60 @@ class MoviePanel extends Component {
       movieItem: {},
     }
   }
-  showMovieItemInfo = (movieItemRender) => {
+  showMovieItemTrailer = (movieItemRender) => {
     this.setState({movieItem: movieItemRender})
   }
+
   renderMovieItem = () =>{
     return this.props.movieList.map((movieItem, index) => {
       return (
-        <div className="slider__item" key={index} onClick={() => this.showMovieItemInfo(movieItem)}>
-            <img src={movieItem.hinhAnh} className="img-fluid" alt={movieItem.hinhAnh}/>
+        <div className="movie-card" key={index}>
+          <NavLink className="card-link" to={`/movie-detail/${movieItem.maPhim}`}>
+            <div className="card-content">
+              <div className="content-left">
+                <div className="left-header-movie">
+                  <h1 className="movie-name">{movieItem.tenPhim}</h1>
+                  {/* <h4 className="group-id">{phim.maNhom}</h4> */}
+                  <p className="during-time">120 phút | </p>
+                  <p className="date-time">
+                    {moment(movieItem.ngayKhoiChieu).format("DD-MM-yyyy")}
+                  </p>
+                  <div className="below-header">
+                  <p className="description">{movieItem.moTa}</p>
+                </div>
+                </div>
+              </div>
+              <div
+                className="content-right"
+                style={{ backgroundImage: `url(${movieItem.hinhAnh})` }}
+              ></div>
+            </div>
+          </NavLink>
+          <div
+            className="play-trailer"
+            data-toggle="modal"
+            data-target={`#${"d" + movieItem.maPhim}`}
+            onMouseOver={() => this.showMovieItemTrailer(movieItem)}
+          >
+            <i className="play-icon fa fa-play"></i>
+          </div>
+          {/* <MovieTrailer xemChiTiet={this.props.movieList} /> */}
         </div>
       )
     })
   }
   render() {
     var settings = {
-      dots: false,
+      dots: true,
       infinite: true,
-      centerMode: true,
-      className: "center",
       lazyLoad: true,
-      centerPadding: '10px',
       speed: 500,
-      slidesToShow: 5,
-      autoplay: true,
+      centerMode: true,
+      slidesToShow: 2,
+      autoplay: false,
       autoplaySpeed: 7000,
       slidesToScroll: 1,
+      adaptiveHeight: true,
       responsive: [
         {
           breakpoint: 1024,
@@ -64,15 +94,9 @@ class MoviePanel extends Component {
           }
         }
       ],
-      beforeChange: (prev, next) => {
-        this.setState({ currentSlide: next });
-      },
     };
     return (
       <div className="moviepanel">
-        <div className="container">
-        <MovieItem movieItem={this.state.movieItem} />
-        </div>
         <div className="row moviepanel__slider">
           <div className="container">
             <div className="col-12 slider__list">
@@ -82,6 +106,7 @@ class MoviePanel extends Component {
             </div>
           </div>
         </div>
+        <MovieTrailer xemChiTiet={this.state.movieItem} />
       </div>
     )
   }

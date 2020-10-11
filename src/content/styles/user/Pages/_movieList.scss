@@ -1,11 +1,14 @@
 .movielist{
+  background-color: $color-purple-0;
+  padding: 1em 0;
+  margin: 2.5em auto;
   .nav{
     .nav-item{
       .nav-link{
         background-color: $color-trans;
         transition: 0.5s all ease-in-out;
         padding: 0 1em 0 0;
-        @include styleText($color-purple-0, 1.2em, 400, $tf-uppercase);
+        @include styleText($color-purple-1, 1.2em, 400, $tf-uppercase);
       }
       .nav-link.active{
         @include styleText($color-white-0, 1.2em, 400, $tf-uppercase);
@@ -43,9 +46,7 @@
       }
     }
     .moviepanel__slider{
-      background-color: $color-purple-0;
-      padding: 3em 0 2.5em;
-      margin-top: 2em;
+      padding-bottom: 3.5em;
       margin-right: 0;
       margin-left: 0;
       .container{

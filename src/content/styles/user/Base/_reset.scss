@@ -16,3 +16,15 @@ p {
 .mainpage{
   background: linear-gradient(180deg, rgba(96,32,128,1) 0%, rgba(176,48,176,1) 100%);
 }
+.slick-slide {
+  margin: 0.5em;
+}
+.slick-dots li button:before {
+  font-size: 16px!important;
+  opacity: .5;
+  color: #fff!important;
+  
+}
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+}
