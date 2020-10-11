@@ -29,5 +29,18 @@ export class QuanLyNguoiDung {
       data: taiKhoan,
     });
   };
+  layBinhLuanPhim = () => {
+    return axios({
+      url: "https://5f656df5fb1b5700169c9bc4.mockapi.io/binhluan",
+      method: "GET",
+    });
+  };
+  themBinhLuanPhim = (binhLuan) => {
+    return axios({
+      url: "https://5f656df5fb1b5700169c9bc4.mockapi.io/binhluan",
+      method: "POST",
+      data: binhLuan,
+    });
+  };
 }
 export const quanLyNguoiDung = new QuanLyNguoiDung();

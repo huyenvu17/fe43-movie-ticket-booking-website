@@ -36,7 +36,7 @@ export default function MovieAll() {
     return danhSachPhimSearch.map((phim, index) => {
       return (
         <div className="movie-card col-md-6 col-sm-12" key={index}>
-          <NavLink className="card-link" to={`/moviedetail/${phim.maPhim}`}>
+          <NavLink className="card-link" to={`/movie-detail/${phim.maPhim}`}>
             <div className="card-content">
               <div className="content-left">
                 <div className="left-header-movie">

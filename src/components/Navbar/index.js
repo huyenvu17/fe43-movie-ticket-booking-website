@@ -145,7 +145,7 @@ export default function Navbar(props) {
           <span className="navbar-toggler-icon" />
         </button>
         <div className="collapse navbar-collapse" id="collapsibleNavbar">
-          <ul className="nav navbar-nav ml-auto menu__links">
+          <ul className="nav navbar-nav ml-auto menu__links" style={{zIndex:1000}}>
             <li className="nav-item">
             
               <NavLink

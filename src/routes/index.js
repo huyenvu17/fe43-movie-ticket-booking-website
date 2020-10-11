@@ -9,8 +9,9 @@ import QuanLyLichChieu from "containers/Admin/QuanLyLichChieu";
 import News from "containers/Admin/News";
 import UserInfo from "containers/UserInfo";
 import NewsDetail from "containers/Home/HomePage/LastestNews/NewsDetail";
-import MovieDetail from "containers/Home/HomePage/MovieList/MovieDetail";
 import MovieAll from "containers/Home/HomePage/MovieAll";
+import DetailMovie from "containers/Home/HomePage/MovieList/MovieDetail";
+import BookTicketMovie from "containers/Home/HomePage/BookTicketMovie";
 
 const routesHome = [
   {
@@ -37,12 +38,17 @@ const routesHome = [
   {
     exact: false,
     path: "/movie-detail/:maPhim",
-    component: MovieDetail,
+    component: DetailMovie,
   },   
   {
     exact: false,
     path: "/news-detail/:id",
     component: NewsDetail,
+  },  
+  {
+    exact: false,
+    path: "/bookticket-movie/:id",
+    component: BookTicketMovie,
   },  
   {
     exact: false,

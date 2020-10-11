@@ -14,7 +14,6 @@ const statePhim = {
     danhGia: "",
   },
   movieList: [],
-  movieDetail: {},
   movieTheater: []
 };
 
@@ -22,9 +21,6 @@ export default (state = statePhim, action) => {
   switch (action.type) {
     case MovieConst.GET_MOVIE_LIST: {
       return {...state, movieList: action.movieList}
-    }
-    case MovieConst.GET_MOVIE_DETAIL: {
-      return {...state, movieDetail: action.movieDetail}
     }
     case MovieConst.GET_MOVIE_THEATER: {
       return {...state, movieTheater: action.movieTheater}

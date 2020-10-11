@@ -12,15 +12,6 @@ export const getMovieListAxios = () => {
     })
   }
 }
-export const getMovieDetailAxios = (maPhim) => {
-  return dispatch => {
-    quanLyPhimServices.layChiTietPhim(maPhim).then(res => {
-      dispatch(MovieTypes.getMovieDetailAction(res.data))
-    }).catch(error => {
-      console.log(error);
-    })
-  }
-}
 export const getMovieScheduleAxios = () => {
   return dispatch => {
     quanLyPhimServices.layCumRapTheoHeThong().then(res => {

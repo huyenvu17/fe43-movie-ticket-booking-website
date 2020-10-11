@@ -1,4 +1,4 @@
-import { DANG_NHAP, DANG_XUAT } from "../types/QuanLyNguoiDungType";
+import { BINH_LUAN, DANG_NHAP, DANG_XUAT } from "../types/QuanLyNguoiDungType";
 
 let taiKhoan = "";
 if (localStorage.getItem("userLogin")) {
@@ -7,6 +7,8 @@ if (localStorage.getItem("userLogin")) {
 
 const initialState = {
   taiKhoan: taiKhoan,
+  binhluan: "",
+  rating: "",
 };
 export default (state = initialState, action) => {
   switch (action.type) {
@@ -18,6 +20,9 @@ export default (state = initialState, action) => {
       localStorage.removeItem("userLogin");
       state.taiKhoan = "";
       window.location.reload();
+      return { ...state };
+    }
+    case BINH_LUAN: {
       return { ...state };
     }
     default:
