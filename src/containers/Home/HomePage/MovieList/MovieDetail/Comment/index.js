@@ -74,26 +74,28 @@ let { maPhim } = props;
     }
   };
     return (
-        <Fragment>
-        <div className="youthink" data-toggle="modal" data-target="#CommentModal">
-          <div className="youthink__items">
-            <div className="items__img">
-              <img   src="https://www.kindpng.com/picc/m/136-1369892_avatar-people-person-business-user-man-character-avatar.png" alt="avt" height="32" />
-              <span style={{backgroundColor:"#17a0b5"}} className="items__text">Bình luận phim đi nào .....</span>
-            </div>
-            <div className="items__stars">
-              <i className="fa fa-star" />
-              <i className="fa fa-star" />
-              <i className="fa fa-star" />
-              <i className="fa fa-star" />
-              <i className="fa fa-star" />
+      <Fragment>
+        <div className="container">
+          <div className="youthink" data-toggle="modal" data-target="#CommentModal">
+            <div className="youthink__items">
+              <div className="items__img">
+                <img src="https://www.kindpng.com/picc/m/136-1369892_avatar-people-person-business-user-man-character-avatar.png" alt="avt" height="32" />
+                <span className="items__text">Bình luận phim đi nào .....</span>
+              </div>
+              <div className="items__stars">
+                <i className="fa fa-star" />
+                <i className="fa fa-star" />
+                <i className="fa fa-star" />
+                <i className="fa fa-star" />
+                <i className="fa fa-star" />
+              </div>
             </div>
           </div>
-        </div>
-        <ModalComment maPhim={maPhim} />
-        <div className="list__comment">{renderBinhLuan()}</div>
-        <div className="readMore">
-          <button className="btn btn__readmore btn-primary">XEM THÊM</button>
+          <ModalComment maPhim={maPhim} />
+          <div className="list__comment">{renderBinhLuan()}</div>
+          <div className="readMore">
+            <button className="btn btn__readmore btn-primary">XEM THÊM</button>
+          </div>
         </div>
       </Fragment>
     )

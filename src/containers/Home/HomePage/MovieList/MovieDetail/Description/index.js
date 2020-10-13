@@ -4,7 +4,7 @@ export default function Description(props) {
     let { thongTin } = props;
     var moment = require("moment");
     return (
-       <div className="container" style={{color:"black"}}>
+       <div className="container movie-detail__des">
            <div className="row">
            <div className="listInfo__Fiml col-md-6 col-sm-12">
            <p className="listInfo__name">Tên Phim</p>

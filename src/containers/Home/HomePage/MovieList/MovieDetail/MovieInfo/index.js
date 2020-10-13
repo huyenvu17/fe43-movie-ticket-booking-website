@@ -11,12 +11,12 @@ export default function MovieInfo(props) {
     var content = [];
     for (let i = 0; i < rating; i++) {
       let star = [];
-      star.push(<BsStarFill key={i} />);
+      star.push(<BsStarFill key={i} style={{marginLeft: 3, marginRight: 3}} />);
       content.push(star);
     }
     for (let i = 0; i < 5 - rating; i++) {
       let star = [];
-      star.push(<BsStarHalf key={i}/>);
+      star.push(<BsStarHalf key={i} style={{marginLeft: 3, marginRight: 3}}/>);
       content.push(star);
     }
     return content;
@@ -45,7 +45,7 @@ export default function MovieInfo(props) {
             <p className="film_star">{renderStar(phim.danhGia)}</p>
         </div>
       </div>
-      <div className="info container-fluid">
+      <div className="info container">
       <div className="row">
           <div className="movie__poster col-3">
             <div className="poster__img">

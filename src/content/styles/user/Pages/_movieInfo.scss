@@ -50,6 +50,7 @@
       top: 12px;
       right: 12px;
       width: 60px;
+      margin: auto;
       text-align: center;   
       .rating__stars {
         color: $color-yellow;       
@@ -75,7 +76,7 @@
             border-radius: 50%;
             text-align: center;
             top: 35%;
-            left: 35%;
+            left: 29%;
             border: 2px solid $color-yellow;
             background-color: rgba(255, 255, 255, 0.15);
             cursor: pointer;
@@ -100,8 +101,10 @@
           padding: spacing(0.4) spacing(0.7);
           margin-right: spacing(0.6);
           margin-top: spacing(0.6);
-          background-color: red;
+          background-color: $color-danger;
+          margin-right: 6px;
           border-radius: 4px;
+          padding: 5px;
           @include Text($fs-0 + 2, $fw-normal);
         }
         .name_fiml {
@@ -109,7 +112,7 @@
           @include Text($fs-3, $fw-normal);
         }
         .time_film {
-          margin-top: spacing(0.5);
+          margin-top: 10px;
           color: $color-white-0;
           @include Text($fs-0, $fw-normal);
         }
@@ -117,8 +120,8 @@
           margin-top: spacing(1);
           color: $color-white-0;
           padding: spacing(0.5) spacing(2.5);
-          background-color: $color-blue;
-          border: 1px solid $color-blue;
+          background-color: $color-purple-0;
+          border: 1px solid $color-purple-0;
           border-radius: 4px;
           outline: none;
           transition: all 0.2s;
@@ -130,14 +133,15 @@
       .movie__rating {
         transform: translateY(20%);
         padding: 0;
+        text-align: center;
         .rating__point {
           position: relative;
           width: 130px;
           height: 130px;
           border-radius: 50%;
           border: 7px solid #333;
-          text-align: center;
-          line-height: 120px;
+          margin: auto;
+          line-height: 115px;
           @include Text($fs-6 + 5, $fw-normal);
           color: $color-white-0;
           background-color:rgba(0, 0, 0, 0.3);
@@ -146,7 +150,7 @@
             position: absolute;
             width: 130px;
             height: 130px;
-            border: 7px solid rgb(214, 236, 15);
+            border: 7px solid $color-purple-0;
             border-radius: 50%;
             top: -7px;
             left: -7px;
@@ -155,10 +159,9 @@
           }
         }
         .rating__stars {
-          //   text-align: center;
           color: $color-yellow;
           @include Text($fs-2, $fw-bold);
-          padding-left: spacing(1.5);
+          margin: 5px auto;
         }
         .rating__text {
           // text-align: center;

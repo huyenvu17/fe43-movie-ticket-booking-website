@@ -109,8 +109,8 @@
                 text-transform: uppercase;
               }
               .group-id {
-                color: $c-gray-2;
-                @include textStyle($fs-2, $fw-normal,$c-gray-1);
+                color: $color-gray-2;
+                @include textStyle($fs-2, $fw-normal,$color-gray-1);
                 margin-top: spacing(0.8);
               }
               .during-time {
@@ -132,7 +132,7 @@
               height: 50%;
               padding: spacing(2.4);
               .description {
-                @include textStyle($fs-1 + 2, $fw-normal ,$c-gray-1);
+                @include textStyle($fs-1 + 2, $fw-normal ,$color-gray-1);
                 display: -webkit-box;
                 -webkit-line-clamp: 7;
                 -webkit-box-orient: vertical;

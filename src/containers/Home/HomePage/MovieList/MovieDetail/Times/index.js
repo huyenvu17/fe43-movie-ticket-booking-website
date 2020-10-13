@@ -152,22 +152,24 @@ export default function Time(props) {
               role="tabpanel"
               aria-labelledby="pills-schedule-tab"
             >
-              <div className="movieTheater__row row bg-light">
-                <div className="row__left col-md-4 col-sm-12">
-                  <div
-                    className="nav flex-column nav-pills"
-                    id="v-pills-rap"
-                    role="tablist"
-                    aria-orientation="vertical"
-                  >
-                    {renderRap()}
+              <div className="container">
+                <div className="movieTheater__row row bg-light">
+                  <div className="row__left col-md-4 col-sm-12">
+                    <div
+                      className="nav flex-column nav-pills"
+                      id="v-pills-rap"
+                      role="tablist"
+                      aria-orientation="vertical"
+                    >
+                      {renderRap()}
+                    </div>
                   </div>
-                </div>
-                <div
-                  className="tab-content col-md-8 col-sm-12"
-                  id="v-pills-tabContent"
-                >
-                  {renderCumRap()}
+                  <div
+                    className="tab-content col-md-8 col-sm-12"
+                    id="v-pills-tabContent"
+                  >
+                    {renderCumRap()}
+                  </div>
                 </div>
               </div>
             </div>
