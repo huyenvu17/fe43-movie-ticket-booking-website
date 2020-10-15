@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 import { quanLyPhimServices } from "services/QuanLyPhimServices";
 import Loading from "containers/Home/Loading";
 import MovieTrailer from "../MovieTrailer";
+import ScreenLoader from "components/Loader";
 export default function MovieAll() {
   var moment = require("moment");
   let [danhSachPhim, setDanhSachPhim] = useState([]);
@@ -81,7 +82,7 @@ export default function MovieAll() {
     });
   };
   if (loading) {
-    return <Loading />;
+    return <ScreenLoader/>;
   } else {
     return (
       <div className="container all-movie">

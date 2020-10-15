@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import * as newsAction from 'redux/actions/QuanLyTinTucAction';
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import { FaLessThanEqual } from 'react-icons/fa';
 class LatestNews extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-
     }
   }
-  componentDidMount(){
+  componentDidMount() {
     this.props.dispatch(newsAction.getNewsListAxios());
   }
   render() {
@@ -17,8 +17,8 @@ class LatestNews extends Component {
       <div className="container latestnews" id="latestNews">
         <div className="heading-md">tin tức điện ảnh</div>
         <div className="row latestnews__wrapper">
-          {this.props.newsList.map((newsItem)=>{
-            return(
+          {this.props.newsList.map((newsItem) => {
+            return (
               <Link className="col-6 col-sm-4" key={newsItem.id} to={`/news-detail/${newsItem.id}`}>
                 <div className="latestnews__newsitem">
                   <img src={newsItem.hinhAnh1} className="newsitem__img" />
