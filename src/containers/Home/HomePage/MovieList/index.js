@@ -16,12 +16,8 @@ export default class MovieList extends Component {
           </ul>
         </div>
           <div className="tab-content" id="pills-tabContent">
-            <div className="tab-pane fade show active" id="movie-showing" role="tabpanel" aria-labelledby="movie-showing-tab">
-              <MoviePanel />
-            </div>
-            <div className="tab-pane fade" id="movie-upcoming" role="tabpanel" aria-labelledby="movie-upcoming-tab">
-              <MoviePanel />
-            </div>
+          <MoviePanel />
+            
           </div>
         </div>
     )

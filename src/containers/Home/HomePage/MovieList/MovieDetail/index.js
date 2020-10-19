@@ -5,6 +5,7 @@ import Time from './Times';
 const DetailMovie = (props) => {
   let [phim, setPhim] = useState([]);
   useEffect(() => {
+    window.scrollTo(0, 0);
     quanLyPhimServices.layThongTinPhim(props.match.params.maPhim).then((result) => {
       setPhim(result.data);
     });

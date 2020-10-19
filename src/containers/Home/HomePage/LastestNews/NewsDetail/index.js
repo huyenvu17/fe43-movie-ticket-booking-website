@@ -14,10 +14,11 @@ class NewsDetail extends Component {
         }
     }
     componentDidMount(){
-        this.props.dispatch(newsAction.getNewsDetailAxios(this.state.movieID));
+        window.scrollTo(0, 0);
         setTimeout(() => {
           this.setState({isFirstLoading: false});
         }, 2500);
+        this.props.dispatch(newsAction.getNewsDetailAxios(this.state.movieID));
     }
     render() {
         let nesDetail = this.props.newsDetail;

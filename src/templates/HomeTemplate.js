@@ -1,9 +1,13 @@
 import Footer from 'components/Footer';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {Route} from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import '../content/styles/user/main.scss';
+
 function HomeLayout(props){
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   return (
     <div className="mainpage">
       <Navbar />

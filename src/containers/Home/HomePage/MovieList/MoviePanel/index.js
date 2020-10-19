@@ -95,19 +95,25 @@ class MoviePanel extends Component {
         }
       ],
     };
+    console.log(this.props.movieList)
     return (
-      <div className="moviepanel">
-        <div className="row moviepanel__slider">
-          <div className="container">
-            <div className="col-12 slider__list">
-              <Slider {...settings}>
-                {this.renderMovieItem()}
-              </Slider>
+      <div className="tab-content" id="pills-tabContent">
+        <div className="tab-pane fade show active" id="movie-showing" role="tabpanel" aria-labelledby="movie-showing-tab">
+          <div className="moviepanel">
+            <div className="row moviepanel__slider">
+              <div className="container">
+                <div className="col-12 slider__list">
+                  <Slider {...settings}>
+                    {this.renderMovieItem()}
+                  </Slider>
+                </div>
+              </div>
             </div>
+            <MovieTrailer xemChiTiet={this.state.movieItem} />
           </div>
         </div>
-        <MovieTrailer xemChiTiet={this.state.movieItem} />
       </div>
+      
     )
   }
   componentDidMount(){
