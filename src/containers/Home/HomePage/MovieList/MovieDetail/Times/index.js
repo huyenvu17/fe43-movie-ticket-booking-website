@@ -37,7 +37,7 @@ export default function Time(props) {
           <div className="timeshow__item" key={index}>
             <NavLink
               className="timeshow__link"
-              to={`/bookticket-movie/${lichChieu.maLichChieu}`}
+              to={`/booking/${lichChieu.maLichChieu}`}
             >
               <div className="time__begin mb-2">
                 {moment(lichChieu.ngayChieuGioChieu).format("DD/MM/yyyy")}

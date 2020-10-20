@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import MotiLogo from 'content/images/logo/moti-logo-white.svg';
-import { FcHome } from 'react-icons/fc'
+
 export default class NavbarAdmin extends Component {
   render() {
     return (
@@ -42,7 +42,7 @@ export default class NavbarAdmin extends Component {
         </li>
         <li className="nav-item active">
             <NavLink activeClassName="active" className="nav-link" to="/home">
-             <FcHome/>
+            <i className="fa fa-undo" aria-hidden="true"></i>
             <span>Home</span> 
            </NavLink>
         </li>
