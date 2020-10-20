@@ -11,7 +11,7 @@ import UserInfo from "containers/UserInfo";
 import NewsDetail from "containers/Home/HomePage/LastestNews/NewsDetail";
 import MovieAll from "containers/Home/HomePage/MovieAll";
 import DetailMovie from "containers/Home/HomePage/MovieList/MovieDetail";
-import BookTicketMovie from "containers/Home/HomePage/BookTicketMovie";
+import Booking from "containers/Home/HomePage/Booking";
 
 const routesHome = [
   {
@@ -47,11 +47,6 @@ const routesHome = [
   },  
   {
     exact: false,
-    path: "/bookticket-movie/:id",
-    component: BookTicketMovie,
-  },  
-  {
-    exact: false,
     path: "/signin",
     component: SignInSignUp,
   },
@@ -60,6 +55,12 @@ const routesHome = [
     path: "/profile",
     component: UserInfo,
   },
+  {
+    exact: false,
+    path: "/booking/:maLichChieu",
+    component: Booking,
+  },
+  
 ];
 const routesAdmin = [
   {

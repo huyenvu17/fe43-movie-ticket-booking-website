@@ -42,5 +42,15 @@ export class QuanLyNguoiDung {
       data: binhLuan,
     });
   };
+  datVeXemPhim = (thongTinDatVe) => {
+    return axios({
+      url: `${domain}/quanlydatve/datve`,
+      method: "POST",
+      data: thongTinDatVe,
+      headers: {
+        Authorization: "Bearer " + localStorage.getItem(token),
+      },
+    });
+  };
 }
 export const quanLyNguoiDung = new QuanLyNguoiDung();

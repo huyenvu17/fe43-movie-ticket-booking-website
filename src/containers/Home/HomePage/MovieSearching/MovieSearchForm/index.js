@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import { quanLyPhimServices } from "services/QuanLyPhimServices";
 var moment = require("moment");
 export default function MovieSearchForm(props) {
@@ -175,8 +176,10 @@ const renderCumRap = () => {
         </div>
       </div>
       <div className="form-row">
-        <div className="form-group col-12">
+        <div className="form-group col-12">      
+          <NavLink  to={`/booking/${maLichChieu}`}>
           <button className="btn btn-primary btn-solid-dark">đặt vé</button>
+          </NavLink>
         </div>
       </div>
     </form>

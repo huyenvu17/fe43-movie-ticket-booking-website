@@ -57,7 +57,7 @@ class MovieTheater extends Component {
                                 {movieScheduleList.lstLichChieuTheoPhim?.slice(0,5).map((movieScheduleItem, movieScheduleItemIndex) => {
                                   let ngayChieuFormat = moment(movieScheduleItem.ngayChieuGioChieu).format('hh:mm A');
                                   return (
-                                    <NavLink className="col-3" key={movieScheduleItemIndex} to={`/bookingTicket/${movieScheduleItem.maLichChieu}`}>{ngayChieuFormat}</NavLink>
+                                    <NavLink className="col-3" key={movieScheduleItemIndex} to={`/booking/${movieScheduleItem.maLichChieu}`}>{ngayChieuFormat}</NavLink>
                                   )
                                 })
                                 }

@@ -22,7 +22,7 @@ export default function BangPhim() {
       });
   }, []);
   const renderDanhSachPhim = () => {
-    return danhSachPhim.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+    return listDanhSachPhim.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
     .map((phim, index) => {
       return (
         <tr tabIndex={-1} key={phim.maPhim}>
@@ -65,18 +65,15 @@ export default function BangPhim() {
                     Swal.fire({
                       title: "Bạn có muốn ?",
                       text: `Xoá phim ${phim.tenPhim}`,
-                      icon: "error",
-                      buttons: true,
-                      dangerMode: true,
-                    }).then((Delete) => {
-                      if (Delete) {
+                      icon: "error",                   
+                    }).then((result) => {
+                      if (result.value) {
                         quanLyAdminService
                           .xoaPhim(phim.maPhim)
-                          .then((res) => {
+                          .then((result) => {
                             Swal.fire({
                               title: "Xóa phim thành công",
-                              icon: "success",
-                              button: "OK",
+                              icon: "success",                          
                             });
                             quanLyPhimServices
                               .layDanhSachPhim()
@@ -133,9 +130,37 @@ export default function BangPhim() {
     setRowsPerPage(parseInt(+event.target.value));
     setPage(0);
   };
-
+ //Tìm kiếm người phim
+ const [searchTerm, setSearchTerm] = useState("");
+ const [listDanhSachPhim, setlistDanhSachPhim] = useState([]);
+ const handleChange = (event) => {
+   setSearchTerm(event.target.value);
+ };
+ useEffect(() => {
+  const results = danhSachPhim.filter((phim) => {
+    return phim.tenPhim
+      .toLowerCase()
+      .includes(searchTerm.toLowerCase());
+  });
+  setlistDanhSachPhim(results);
+}, [searchTerm, danhSachPhim]);
   return (
-      <div className="table-responsive">
+    <div>
+       <div className="searchBox">
+        <input
+          className="searchInput"
+          type="text"
+          value={searchTerm}
+          onChange={handleChange}
+          name="search"
+          placeholder="Nhập tên tài khoản cần tìm....."
+        />
+        <button className="searchButton" href="#">
+          <i className="fa fa-search" aria-hidden="true"></i>
+        </button>
+      </div>
+     
+   <div className="table-responsive">
         <table className="table">
           <thead className="thead-dark">
             <tr>
@@ -164,5 +189,7 @@ export default function BangPhim() {
           onChangeRowsPerPage={handleChangeRowsPerPage}
         />
       </div>
-  );
+ 
+    </div>
+    );
 }

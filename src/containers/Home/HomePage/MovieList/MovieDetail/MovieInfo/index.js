@@ -1,5 +1,6 @@
 import MovieTrailer from "containers/Home/HomePage/MovieTrailer";
 import React from "react";
+import { NavLink } from "react-bootstrap";
 import {BsStarFill, BsStarHalf} from 'react-icons/bs';
 
 export default function MovieInfo(props) {
@@ -70,8 +71,8 @@ export default function MovieInfo(props) {
             <span className="code_group">{phim.maNhom}</span>
             <span className="name_fiml">{phim.tenPhim}</span>
             <p className="time_film"> 120 phút </p>
-            <a href="#movieTheater">
-              <button className="bookTicket-btn">Mua Vé</button>
+            <a href="#movieTheater">            
+              <button className="bookTicket-btn">Mua Vé</button>                   
             </a>
           </div>
           <div className="movie__rating col-2">
