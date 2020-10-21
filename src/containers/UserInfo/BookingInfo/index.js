@@ -1,4 +1,5 @@
 import React from "react";
+import Table from 'react-bootstrap/Table'
 var moment = require("moment");
 export default function BookingInfo(props) {
   let { thongTin } = props;
@@ -26,49 +27,22 @@ export default function BookingInfo(props) {
     });
   };
   return (
-    <div style={{ marginTop: "35px" }}>
-      <div id="accordion">
-        <div className="card">
-          <div className="card-header" id="headingOne">
-            <h5 className="mb-0">
-              <button
-                className="btn btn-light collapsed"
-                data-toggle="collapse"
-                data-target="#collapseTwo"
-                aria-expanded="true"
-                aria-controls="collapseTwo"
-              >
-                Lịch Sử Đặt Vé
-              </button>
-            </h5>
-          </div>
-
-          <div
-            id="collapseTwo"
-            className="collapse "
-            aria-labelledby="headingOne"
-            data-parent="#accordion"
-          >
-            <div className="card-body bg-light">
-              <table className="table table-bordered">
-                <thead>
-                  <tr>
-                    <th scope="col">Mã Vé</th>
-                    <th scope="col">Tên Phim</th>
-                    <th scope="col">Thời Gian Đặt Vé</th>
-                    <th scope="col">Số Ghế </th>
-                    <th scope="col">Tiền Vé</th>
-                    <th scope="col">Thời Lượng Phim </th>
-                  </tr>
-                </thead>
-                <tbody>
-                    {renderThongTinDatVe()}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div className="panel">
+      <Table responsive="sm" className="userbookingtickets">
+      <thead>
+          <tr>
+            <th scope="col">Mã Vé</th>
+            <th scope="col">Tên Phim</th>
+            <th scope="col">Thời Gian Đặt Vé</th>
+            <th scope="col">Số Ghế </th>
+            <th scope="col">Tiền Vé</th>
+            <th scope="col">Thời Lượng Phim </th>
+          </tr>
+        </thead>
+        <tbody>
+          {renderThongTinDatVe()}
+        </tbody>
+      </Table>
     </div>
   );
 }

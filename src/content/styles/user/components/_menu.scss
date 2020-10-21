@@ -4,7 +4,9 @@
     padding: 0;
   }
   .menu__links {
+    align-items: center;
     .nav-item{
+      margin: 0 7px;
       .nav-link{
         color: #fff;
         font-size: 1em;

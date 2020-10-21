@@ -68,15 +68,15 @@ export default function Navbar(props) {
       return (
         <Fragment>
           <div
-            className="login_toggle mt-4 ml-5"
+            className="login_toggle"
             ref={anchorRef}
             aria-controls={open ? "menu-list-grow" : undefined}
             aria-haspopup="true"
             onClick={handleToggle}
-            style={{ cursor: "pointer" ,zIndex:"1000" }}
+            style={{ cursor: "pointer",zIndex:"1000" }}
           >
-         <img src="https://www.kindpng.com/picc/m/136-1369892_avatar-people-person-business-user-man-character-avatar.png" height="32" width="32" />
-            <span style={{fontSize:"13px" , color:"white" , marginLeft:"5px"}}>{taiKhoan}</span>
+            <img src="https://www.kindpng.com/picc/m/136-1369892_avatar-people-person-business-user-man-character-avatar.png" height="32" width="32" style={{borderRadius: '50%', objectFit: 'cover'}} />
+            <span style={{fontSize:"1em" , color:"white" , marginLeft:"7px"}}>{taiKhoan}</span>
           </div>
           <Popper
             open={open}
@@ -107,11 +107,11 @@ export default function Navbar(props) {
                           style={{ textDecoration: "none", color: "#333" }}
                         >
                           <i className="fa fa-user mr-2"></i>
-                          Profile
+                          Hồ Sơ
                         </NavLink>
                       </MenuItem>
                       <MenuItem onClick={Logout}>
-                        <BiLogOut className="mr-2"/> Logout 
+                        <BiLogOut className="mr-2"/> Đăng Xuất 
                       </MenuItem>
                     </MenuList>
                   </ClickAwayListener>
@@ -147,7 +147,6 @@ export default function Navbar(props) {
         <div className="collapse navbar-collapse" id="collapsibleNavbar">
           <ul className="nav navbar-nav ml-auto menu__links" style={{zIndex:1000}}>
             <li className="nav-item">
-            
               <NavLink
                 exact
                 activeClassName="active"
@@ -179,7 +178,6 @@ export default function Navbar(props) {
               {renderLogin()}
             </li>
           </ul>
-          {/* <div>{renderLogin()}</div> */}
         </div>
       </nav>
     </div>

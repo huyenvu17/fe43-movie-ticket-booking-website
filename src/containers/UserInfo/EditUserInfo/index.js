@@ -122,151 +122,124 @@ export default function EditUser() {
   };
 
   return (
-    <div style={{ marginTop: "35px" }}>
-      <div id="accordion">
-        <div className="card">
-          <div className="card-header" id="headingOne">
-            <h5 className="mb-0">
-              <button
-                className="btn btn-light collapsed"
-                data-toggle="collapse"
-                data-target="#collapseOne"
-                aria-expanded="true"
-                aria-controls="collapseOne"
-              >
-                Chỉnh Sửa Thông Tin Tài Khoản
-              </button>
-            </h5>
-          </div>
-
-          <div            
-            id="collapseOne"
-            className="collapse "
-            aria-labelledby="headingOne"
-            data-parent="#accordion"
-          >
-            <div className="card-body bg-light">
-              <form onSubmit={handleSubmit}>
-              <div className="form-group">
-                  <div className="input-group">
-                    <div className="input-group-prepend">
-                      <span className="input-group-text">
-                        <i className="fa fa-id-badge"></i>
-                      </span>
-                    </div>
-                    <input
-                      type="text"
-                      name="taiKhoan"
-                      className="form-control input-sm"
-                      placeholder="Nhập Tài Khoản"
-                      value={state.values.taiKhoan}
-                      onChange={handleInput}
-                      disabled
-                      required
-                    />
-                  </div>
-                  <span className="text-danger" id="tbTaiKhoan">
-                    {state.errors.taiKhoan}
-                  </span>
-                </div>
-               
-                <div className="form-group">
-                  <div className="input-group">
-                    <div className="input-group-prepend">
-                      <span className="input-group-text">
-                        <i className="fa fa-user"></i>
-                      </span>
-                    </div>
-                    <input
-                      type="text"
-                      name="hoTen"
-                      className="form-control input-sm"
-                      placeholder="Nhập Họ Tên"
-                      onChange={handleInput}
-                      value={state.values.hoTen}
-                      required
-                    />
-                  </div>
-                  <span className="text-danger" id="tbHoTen">
-                    {state.errors.hoTen}
-                  </span>
-                </div>
-               <div className="form-group">
-                  <div className="input-group">
-                    <div className="input-group-prepend">
-                      <span className="input-group-text">
-                        <i className="fa fa-key"></i>
-                      </span>
-                    </div>
-                    <input
-                      type="password"
-                      name="matKhau"
-                      className="form-control input-sm"
-                      placeholder="Nhập Mật Khẩu"
-                      onChange={handleInput}
-                      value={state.values.matKhau}
-                      required
-                    />
-                  </div>
-                  <span className="text-danger" id="tbMatKhau">
-                    {state.errors.matKhau}
-                  </span>
-                </div>
-                <div className="form-group">
-                  <div className="input-group">
-                    <div className="input-group-prepend">
-                      <span className="input-group-text">
-                        <i className="fa fa-envelope"></i>
-                      </span>
-                    </div>
-                    <input
-                      type="email"
-                      name="email"
-                      className="form-control input-sm"
-                      placeholder="Nhập Email"
-                      onChange={handleInput}
-                      value={state.values.email}
-                      required
-                    />
-                  </div>
-                  <span className="text-danger" id="tbEmail">
-                    {state.errors.email}
-                  </span>
-                </div>
-                <div className="form-group">
-                  <div className="input-group">
-                    <div className="input-group-prepend">
-                      <span className="input-group-text">
-                        <i className="fa fa-phone"></i>
-                      </span>
-                    </div>
-                    <input
-                      type="text"
-                      name="soDT"
-                      className="form-control input-sm"
-                      placeholder="Nhập Số Điện Thoại"
-                      onChange={handleInput}
-                      value={state.values.soDT}
-                      required
-                    />
-                  </div>
-                  <span className="text-danger" id="tbSoDt">
-                    {state.errors.soDT}
-                  </span>
-                </div>
-                <div className="form-group">
-                  <button
-                    className="btn btn-success form-control"
-                    type="submit"                 
-                  >
-                    Thay đổi thông tin
-                  </button>
-                </div>
-              </form>
+    <div className="panel">
+      <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <div className="input-group">
+              <div className="input-group-prepend">
+                <span className="input-group-text">
+                  <i className="fa fa-id-badge"></i>
+                </span>
+              </div>
+              <input
+                type="text"
+                name="taiKhoan"
+                className="form-control input-sm"
+                placeholder="Nhập Tài Khoản"
+                value={state.values.taiKhoan}
+                onChange={handleInput}
+                disabled
+                required
+              />
             </div>
+            <span className="text-danger" id="tbTaiKhoan">
+              {state.errors.taiKhoan}
+            </span>
           </div>
-        </div>
-      </div>
+          <div className="form-group">
+            <div className="input-group">
+              <div className="input-group-prepend">
+                <span className="input-group-text">
+                  <i className="fa fa-user"></i>
+                </span>
+              </div>
+              <input
+                type="text"
+                name="hoTen"
+                className="form-control input-sm"
+                placeholder="Nhập Họ Tên"
+                onChange={handleInput}
+                value={state.values.hoTen}
+                required
+              />
+            </div>
+            <span className="text-danger" id="tbHoTen">
+              {state.errors.hoTen}
+            </span>
+          </div>
+          <div className="form-group">
+            <div className="input-group">
+              <div className="input-group-prepend">
+                <span className="input-group-text">
+                  <i className="fa fa-key"></i>
+                </span>
+              </div>
+              <input
+                type="password"
+                name="matKhau"
+                className="form-control input-sm"
+                placeholder="Nhập Mật Khẩu"
+                onChange={handleInput}
+                value={state.values.matKhau}
+                required
+              />
+            </div>
+            <span className="text-danger" id="tbMatKhau">
+              {state.errors.matKhau}
+            </span>
+          </div>
+          <div className="form-group">
+            <div className="input-group">
+              <div className="input-group-prepend">
+                <span className="input-group-text">
+                  <i className="fa fa-envelope"></i>
+                </span>
+              </div>
+              <input
+                type="email"
+                name="email"
+                className="form-control input-sm"
+                placeholder="Nhập Email"
+                onChange={handleInput}
+                value={state.values.email}
+                required
+              />
+            </div>
+            <span className="text-danger" id="tbEmail">
+              {state.errors.email}
+            </span>
+          </div>
+          <div className="form-group">
+            <div className="input-group">
+              <div className="input-group-prepend">
+                <span className="input-group-text">
+                  <i className="fa fa-phone"></i>
+                </span>
+              </div>
+              <input
+                type="text"
+                name="soDT"
+                className="form-control input-sm"
+                placeholder="Nhập Số Điện Thoại"
+                onChange={handleInput}
+                value={state.values.soDT}
+                required
+              />
+            </div>
+            <span className="text-danger" id="tbSoDt">
+              {state.errors.soDT}
+            </span>
+          </div>
+          <div className="form-group">
+            <button
+              className="btn btn-success form-control btn-solid-dark"
+              type="submit"
+            >
+              Thay đổi thông tin
+                  </button>
+          </div>
+        </form>
     </div>
+
   );
 }
