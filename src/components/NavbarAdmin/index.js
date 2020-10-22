@@ -43,7 +43,7 @@ export default class NavbarAdmin extends Component {
         <li className="nav-item active">
             <NavLink activeClassName="active" className="nav-link" to="/home">
             <i className="fa fa-undo" aria-hidden="true"></i>
-            <span>Home</span> 
+            <span>Trở về trang chủ</span> 
            </NavLink>
         </li>
       </ul>

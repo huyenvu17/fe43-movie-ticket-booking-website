@@ -7,7 +7,7 @@
         transition: all 0.2s;
         border: none;
         .nav-link {
-          color: $color-white-0;
+          color: $color-purple-1;
           background: none;
           @include Text($fs-2, $fw-normal);
           transition: all 0.1s;
@@ -15,7 +15,7 @@
           transform: scale(1);                
           &.active {
             background: none;
-            color: $color-purple-1;
+            color: $color-white-0;
           }
           &:hover {         
             transform: scale(1.1);
@@ -24,7 +24,7 @@
       }
     }
     #movieTheater {
-      padding-bottom: spacing(3);
+      padding: 2em 0 4em; 
       #pills-schedule {
         .movieTheater__row {
           padding: 0;

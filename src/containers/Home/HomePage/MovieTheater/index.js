@@ -26,7 +26,7 @@ class MovieTheater extends Component {
     return movieTheaterList.map((theaterList, index) => {
       return (
         <Tab.Pane eventKey={theaterList.maHeThongRap} key={index}>
-          <img src={movieLine} />
+          <img src={movieLine} className="movie-line" />
           <Tab.Container defaultActiveKey={config.firstMovieTheaterBranchTab}>
             <div className="row">
               <div className="col-5">

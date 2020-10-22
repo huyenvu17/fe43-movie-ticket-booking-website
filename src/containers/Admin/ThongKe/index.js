@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { quanLyPhimServices } from "services/QuanLyPhimServices";
+import movieBanner from 'content/images/illustrations/newslater-bg01.jpg';
 export default function ThongKe() {
   let [lstHeThongRap, setHeThongRap] = useState([]);
 
@@ -30,9 +31,12 @@ export default function ThongKe() {
     });
   };
   return (
-    <dl>
+    <div className="container">
+      {/* <dl>
       <dt>Rạp phim được đặt vé nhiều nhất </dt>
       {renderRap()}
-    </dl>
+    </dl> */}
+    <img src={movieBanner} style={{width: '100%'}} />
+    </div>
   );
 }

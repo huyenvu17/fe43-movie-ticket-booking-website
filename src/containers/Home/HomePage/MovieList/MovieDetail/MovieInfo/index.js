@@ -2,7 +2,7 @@ import MovieTrailer from "containers/Home/HomePage/MovieTrailer";
 import React from "react";
 import { NavLink } from "react-bootstrap";
 import {BsStarFill, BsStarHalf} from 'react-icons/bs';
-
+import emptyMoviePoster from 'content/images/illustrations/empty-movie-poster.png'
 export default function MovieInfo(props) {
 
   let { phim } = props;
@@ -51,8 +51,8 @@ export default function MovieInfo(props) {
           <div className="movie__poster col-3">
             <div className="poster__img">
               <img
-                style={{ width: 220, height: 300 }}
-                src={phim.hinhAnh}
+                style={{ width: 220, height: 300, objectFit: 'cover' }}
+                src={phim.hinhAnh != "" ? phim.hinhAnh : emptyMoviePoster}
                 alt={phim.hinhAnh}
               />
               <div

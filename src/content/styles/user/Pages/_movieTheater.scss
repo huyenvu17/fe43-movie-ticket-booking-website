@@ -12,7 +12,7 @@
       display: flex;
       border-radius: 10px 0 0 10px;
       align-items: center;
-      color: $color-purple-1;
+      color: #e8a6ff;
       font-size: 1.125em;
       transition: all 0.4s;
       img{
@@ -30,15 +30,20 @@
   }
   #movieTheaterTabContent{
     .tab-pane{
+      .movie-line{
+        width: 100%;
+        padding: 20px 15px;
+      }
       #theaterListGroupTab{
         .nav-item{
           transition: all 0.4s;
           .nav-link{
             background-color: transparent;
-            color: #602080;
+            color: #e8a6ff;
           }
           .nav-link.active{
             color: #fff;
+            background: #ffffff21;
           }
         }
       }
