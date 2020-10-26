@@ -1,0 +1,44 @@
+.booking__content{
+    padding: 3em 4em;
+    .booking__wrapper{
+        border-radius: 10px;
+        box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.2),
+        0px 20px 31px 3px rgba(0, 0, 0, 0.14),
+        0px 8px 38px 7px rgba(0, 0, 0, 0.12);
+        .booking__choosechair{
+            padding: 2em
+        }
+    }
+    .checkout__form{
+        background-color: $color-gray-4;
+        border-radius: 0 10px 10px 0;
+        padding: 0 2em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .row{
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+        .checkout__moviename{
+            @include textStyle(1.3em, $fw-bold-0, $color-black-0);
+        }
+        .checkout__ticketitem{
+            @include textStyle(1em, $fw-bold-0, $color-black-0);
+        }
+        .checkout__title{
+            @include textStyle(1em, $fw-normal, $color-gray);
+        }
+        .payment-total{
+            .checkout__ticketitem{
+                @include textStyle(1.2em, $fw-bold-0, $color-purple-0);
+            }
+        }
+    }
+}
+
+@include responsive("small") {
+    .booking__content {
+        padding: 1em 2em;
+    }
+}

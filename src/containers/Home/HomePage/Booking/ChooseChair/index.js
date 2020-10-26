@@ -51,7 +51,7 @@ export default function ChooseChair(props) {
     counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
     if (counter === 0) {
       Swal.fire({
-        title: "Bạn đã chọn vé quá !!!",
+        title: "Đã hết thời gian giữ ghế. Vui lòng thực hiện đơn hàng trong thời hạn 5 phút!",
         icon: "error",
       });
       setTimeout(() => {
@@ -60,7 +60,7 @@ export default function ChooseChair(props) {
     }
   }, [counter]);
   return (
-    <div className=" col-md-9 col-sm-12 p-0">
+    <div className="col-md-8 col-sm-12 booking__choosechair">
       <div className="">
         <div
           className="poster__film"
