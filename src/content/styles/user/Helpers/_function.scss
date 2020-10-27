@@ -1,0 +1,12 @@
+@function getBreakpoint($screen) {
+    @if map-has-key($map: $breakpoints, $key: $screen) {
+      @return map-get($map: $breakpoints, $key: $screen);
+    } @else {
+      @warn "Không hợp lệ !!";
+    }
+  }
+  
+  @function spacing($num) {
+    @return $num * $default-spacing;
+  }
+  

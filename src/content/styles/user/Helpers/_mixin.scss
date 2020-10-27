@@ -147,3 +147,46 @@
     @warn "please re-enter";
   }
 }
+
+$stiny__mobile:"only screen and (max-width: #{getBreakpoint("tiny") - 1px})";
+$tiny__mobile:"only screen and (min-width: #{getBreakpoint("tiny") + 1px}) and (max-width: #{getBreakpoint("small") - 1px})";
+$mobile: "only screen and (max-width: #{getBreakpoint("small") - 1px})";
+$tablet: "only screen and (min-width: #{getBreakpoint("small") + 1px}) and (max-width: #{getBreakpoint("medium") - 1px})";
+$screen__small: "only screen and (min-width: #{getBreakpoint("medium")}) and (max-width: #{getBreakpoint("large")})";
+$screen__medium: "only screen and (min-width: #{getBreakpoint("large") + 1px}) and (max-width: #{getBreakpoint("extra-large") - 1px})";
+
+
+@mixin responsive_mobile--stiny() {
+  @media #{$stiny__mobile} {
+    @content;
+  }
+}
+@mixin responsive_mobile--tiny() {
+  @media #{$tiny__mobile} {
+    @content;
+  }
+}
+
+@mixin responsive_mobile() {
+  @media #{$mobile} {
+    @content;
+  }
+}
+
+@mixin responsive_tablet() {
+  @media #{$tablet} {
+    @content;
+  }
+}
+
+@mixin responsive_laptop--mini() {
+  @media #{$screen__small} {
+    @content;
+  }
+}
+
+@mixin responsive_laptop--medium() {
+  @media #{$screen__medium} {
+    @content;
+  }
+}

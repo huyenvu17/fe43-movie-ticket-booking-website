@@ -75,6 +75,8 @@ $tf-normal: normal;
 $line-height-0: 1.43;
 
 
+$default-spacing: 10px;
+
 //variable font-weight
 $fw-normal: normal;
 $fw-bold-0: 600;
@@ -89,4 +91,6 @@ $breakpoints:(
     'large' : 992px,
     'medium' : 768px,
     'small' : 576px,
+    "tiny": 420px,
+    "super-tiny": 320px,
 )
