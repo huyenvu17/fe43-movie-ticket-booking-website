@@ -4,11 +4,14 @@ import { quanLyNguoiDung } from "services/QuanLyNguoiDungServices";
 import Swal from "sweetalert2";
 import { Redirect } from "react-router-dom";
 import QuanLyNguoiDung from "containers/Admin/Users";
+import movieLine from 'content/images/illustrations/movie-lines.svg';
 export default function Payment(props) {
   let { thongTinPhongVe, danhSachGheDangDat, param } = props;
   const renderThongTinGheDat = () => {
     return danhSachGheDangDat.map((gheDaDat, index) => {
-      return <span key={index}>Ghế: {gheDaDat.tenGhe}</span>;
+      let danhSachGheDatCount = danhSachGheDangDat.length;
+      console.log(danhSachGheDangDat.length)
+      return <span key={index}>{danhSachGheDatCount > 0 ? gheDaDat.tenGhe : 'Chưa chọn ghế'}{danhSachGheDatCount > 1 && ', '}</span>;
     });
   };
   const renderTinhTongTien = () => {
@@ -37,8 +40,8 @@ export default function Payment(props) {
       .then((res) => {
         console.log(res.data);
         Swal.fire(
-          'Bạn Có Chắc ??',
-          'Muốn Đặt Vé Xem Phim ?',
+          'Xác nhận đặt vé??',
+          'Bạn muốn đặt vé phim này?',
           'question'
         ).then((result) => {
           if (result.value) {
@@ -62,37 +65,68 @@ export default function Payment(props) {
       });
   };
   return (
-    <div className=" col-md-3 col-sm-12">
-      <div className="checkout__form">
-        <div className="total__price">
-          <span className="price">₫{renderTinhTongTien()}</span>
-        </div>
-        <div className="movie__info">
-          <span className="movie__name--Cine">
-            {thongTinPhongVe.thongTinPhim?.tenRap}
-          </span>
-          <span className="movie__name">
+    <div className="col-md-4 col-sm-12 checkout__form">
+      <div className="">
+        <div className="row">
+          <div className="col-12">
+            <img src={movieLine} className="movie-line img-fluid my-2" />
+          </div>
+          <div className="col-12">
+          <div className="checkout__moviename">
             {thongTinPhongVe.thongTinPhim?.tenPhim}
-          </span>
-          <p className="movie__detail">
-            {thongTinPhongVe.thongTinPhim?.ngayChieu} -{" "}
-            {thongTinPhongVe.thongTinPhim?.gioChieu}
-          </p>
-          <p className="theater__name">
-            {thongTinPhongVe.thongTinPhim?.tenCumRap}
-          </p>
-          <p className="movie__address">
-            {thongTinPhongVe.thongTinPhim?.diaChi}
-          </p>
+          </div>
+          </div>
         </div>
-        <div className="count__slot">
-          <div>Ghế đã chọn: </div>
-          <div className="slot">{renderThongTinGheDat()}</div>
+        <div className="row">
+          <div className="col-6">
+            <div className="checkout__title">Ghế</div>
+            <div className="checkout__ticketitem">
+              {danhSachGheDangDat.length > 0 ? renderThongTinGheDat() : 'Chưa chọn ghế'}
+            </div>
+          </div>
+          <div className="col-6 text-right">
+            <div className="checkout__title">Lịch chiếu</div>
+            <div className="checkout__ticketitem">
+              {thongTinPhongVe.thongTinPhim?.ngayChieu} - {" "}
+              {thongTinPhongVe.thongTinPhim?.gioChieu}
+            </div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-6">
+            <div className="checkout__title">Cụm Rạp</div>
+            <div className="checkout__ticketitem">
+              <p>{thongTinPhongVe.thongTinPhim?.tenCumRap} <br />{thongTinPhongVe.thongTinPhim?.diaChi}</p>
+            </div>
+          </div>
+          <div className="col-6 text-right">
+            <div className="checkout__title">Rạp</div>
+            <div className="checkout__ticketitem">
+              {thongTinPhongVe.thongTinPhim?.tenRap}
+            </div>
+          </div>
+        </div>
+        <div className="row payment-total">
+          <div className="col-6">
+            <div className="checkout__ticketitem">TỔNG TIỀN</div>
+          </div>
+          <div className="col-6 text-right">
+            <div className="checkout__ticketitem">
+              {renderTinhTongTien()} ₫
+          </div>
+          </div>
         </div>
       </div>
-      <button className="btn btn-success" onClick={() => datVe()}>
-        Thanh toán
-      </button>
+      <div className="row">
+        <div className="col-12">
+          <button className="btn btn-success btn-solid-dark w-100" onClick={() => datVe()}>
+            Thanh Toán
+          </button>
+        </div>
+        <div className="col-12">
+        <img src={movieLine} className="movie-line img-fluid my-3" />
+        </div>
+      </div>
     </div>
   );
 }

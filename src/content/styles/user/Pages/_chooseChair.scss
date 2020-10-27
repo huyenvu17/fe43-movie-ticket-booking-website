@@ -64,11 +64,11 @@
             margin-right: spacing(1);
             @include Text($fs-2 + 5, $fw-bold);
             cursor: pointer;
-            color: $color-gray-2;
+            color: $color-gray-3;
             &.item--picking {
-              color: $color-blue;
+              color: $color-purple-0;
               &.item--vip {
-                color: $color-blue;
+                color: $color-purple-0;
               }
             }
             &.item--picked {
@@ -76,25 +76,25 @@
               cursor: no-drop;
             }
             &.item--vip {
-              color: $color-red-0;
+              color: $color-yellow;
             }          
           }
         }
       }
     }
     .slot__detail {
-      padding-bottom: spacing(2);
+      margin-top: 2em;
       text-align: center;    
       .fas {
         // margin-right: spacing(0.5);
         &.item--regular {
-          color: $color-gray-2;
+          color: $color-gray-3;
         }
         &.item--picking {
-          color: $color-blue;
+          color: $color-purple-0;
         }
         &.item--vip {
-          color: $color-red-0;
+          color: $color-yellow;
         }
         &.item--picked {
           opacity: 0.2;

@@ -142,7 +142,9 @@ export default function Navbar(props) {
           data-toggle="collapse"
           data-target="#collapsibleNavbar"
         >
-          <span className="navbar-toggler-icon" />
+          <span className="navbar-toggler-icon">
+            <i className="fas fa-bars" style={{color: '#fff', fontSize: 28}}></i>
+          </span>
         </button>
         <div className="collapse navbar-collapse" id="collapsibleNavbar">
           <ul className="nav navbar-nav ml-auto menu__links" style={{zIndex:1000}}>

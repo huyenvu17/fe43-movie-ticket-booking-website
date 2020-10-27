@@ -98,11 +98,6 @@
         background-color: $color-white-0;
         border-color: $bd-color-focus;
         border-right-color: transparent;
-        // & + .input-group-append {
-        //   background-color: $color-white-0;
-        //   border-color: $color-gray-6;
-        //   border-left-color: transparent;
-        // }
       }
       &:focus + .input-group-append {
         .input-group-text {
