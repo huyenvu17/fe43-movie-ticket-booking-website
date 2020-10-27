@@ -53,7 +53,7 @@ class MovieTheater extends Component {
                             <div key={movieScheduleIndex} id="theaterListGroupTabContent" >
                               <img src={movieScheduleList.hinhAnh} className="theater__tabmovie-img" />
                               <div>{movieScheduleList.tenPhim}</div>
-                              <div>
+                              <div className="mb-3">
                                 {movieScheduleList.lstLichChieuTheoPhim?.slice(0,5).map((movieScheduleItem, movieScheduleItemIndex) => {
                                   let ngayChieuFormat = moment(movieScheduleItem.ngayChieuGioChieu).format('hh:mm A');
                                   return (

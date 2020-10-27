@@ -9,3 +9,8 @@
     }
   }
 }
+@include responsive("small") {
+  .movie-searching{
+    padding: 1.5em;
+  }
+}

@@ -40,8 +40,8 @@ export default function Payment(props) {
       .then((res) => {
         console.log(res.data);
         Swal.fire(
-          'Bạn Có Chắc ??',
-          'Muốn Đặt Vé Xem Phim ?',
+          'Xác nhận đặt vé??',
+          'Bạn muốn đặt vé phim này?',
           'question'
         ).then((result) => {
           if (result.value) {

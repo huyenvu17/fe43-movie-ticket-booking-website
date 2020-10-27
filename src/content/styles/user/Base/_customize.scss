@@ -1,10 +1,15 @@
 .heading-lg{
-  @include styleText($color-white-0, 2.5em, $fw-bold-0, normal)
+  @include styleText($color-white-0, 2.5em, $fw-bold-0, initial);
 }
 .heading-md {
   @include styleText($color-white-0, 1.2em, 400, uppercase)
 }
 .text-normal{
-  @include styleText($color-white-0, 1em, 300, normal)
+  @include styleText($color-white-0, 1em, 300, initial)
 }
 
+@include responsive("small") {
+  .heading-lg{
+    @include styleText($color-white-0, 1.5em, $fw-bold-0, initial);
+  }
+}

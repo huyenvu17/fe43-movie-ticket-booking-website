@@ -40,5 +40,8 @@
 @include responsive("small") {
     .booking__content {
         padding: 1em 2em;
+        .checkout__form {
+          border-radius: 0 0px 10px 10px;
+      }
     }
 }

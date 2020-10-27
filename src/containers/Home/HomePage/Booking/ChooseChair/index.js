@@ -86,7 +86,7 @@ export default function ChooseChair(props) {
               </div>
             </div>
             <div className="timeKeepSlot">
-              <p className="title__text">thời gian giữ ghế</p>
+              <p className="title__text">Thời gian giữ ghế</p>
               <span className="time">{counter + "s"}</span>
             </div>
           </div>
