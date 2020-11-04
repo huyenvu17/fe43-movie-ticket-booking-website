@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -18,8 +18,8 @@ class MoviePanel extends Component {
     this.setState({movieItem: movieItemRender})
   }
 
-  renderMovieItem = () =>{
-    return this.props.movieList.map((movieItem, index) => {
+  renderMovieItem = (movieListDivision) =>{
+    return movieListDivision?.map((movieItem, index) => {
       return (
         <div className="movie-card" key={index}>
           <NavLink className="card-link" to={`/movie-detail/${movieItem.maPhim}`}>
@@ -70,23 +70,6 @@ class MoviePanel extends Component {
       adaptiveHeight: true,
       responsive: [
         {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            infinite: true,
-            dots: true
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            initialSlide: 2
-          }
-        },
-        {
           breakpoint: 480,
           settings: {
             slidesToShow: 1,
@@ -95,24 +78,58 @@ class MoviePanel extends Component {
         }
       ],
     };
-    console.log(this.props.movieList)
+    let movieList = this.props.movieList;
+    let currentDateConfig = moment().subtract(500, 'days').calendar();
+    let showingMovies = movieList.filter(movieFilter => moment(movieFilter.ngayKhoiChieu).format("DD-MM-yyyy") > moment(currentDateConfig).format("DD-MM-yyyy"));
+    let comingMovies = movieList.filter(movieFilter => moment(movieFilter.ngayKhoiChieu).format("DD-MM-yyyy") < moment(currentDateConfig).format("DD-MM-yyyy"))
+    //let tabId = showingMovies ? "movie-showing" : "movie-upcoming";
+    //let tabActive = showingMovies ? "actie=ve" : "movie-upcoming";
     return (
-      <div className="tab-content" id="pills-tabContent">
-        <div className="tab-pane fade show active" id="movie-showing" role="tabpanel" aria-labelledby="movie-showing-tab">
-          <div className="moviepanel">
-            <div className="row moviepanel__slider">
-              <div className="container">
-                <div className="col-12 slider__list">
-                  <Slider {...settings}>
-                    {this.renderMovieItem()}
-                  </Slider>
+      <Fragment>
+        <div className="container">
+          <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li className="nav-item">
+              <a className="nav-link active" id="movie-showing-tab" data-toggle="pill" href="#movie-showing" role="tab" aria-controls="movie-showing" aria-selected="true">đang chiếu</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" id="movie-upcoming-tab" data-toggle="pill" href="#movie-upcoming" role="tab" aria-controls="movie-upcoming" aria-selected="false">sắp chiếu</a>
+            </li>
+          </ul>
+        </div>
+        <div className="tab-content" id="pills-tabContent">
+          <div className="tab-content" id="pills-tabContent">
+          <div className="tab-pane fade show active" id="movie-showing" role="tabpanel" aria-labelledby="movie-showing-tab">
+              <div className="moviepanel">
+                <div className="row moviepanel__slider">
+                  <div className="container">
+                    <div className="col-12 slider__list">
+                      <Slider {...settings}>
+                        {this.renderMovieItem(showingMovies)}
+                      </Slider>
+                    </div>
+                  </div>
                 </div>
+                <MovieTrailer xemChiTiet={this.state.movieItem} />
               </div>
             </div>
-            <MovieTrailer xemChiTiet={this.state.movieItem} />
+            <div className="tab-pane fade show" id="movie-upcoming" role="tabpanel" aria-labelledby="movie-upcoming-tab">
+              <div className="moviepanel">
+                <div className="row moviepanel__slider">
+                  <div className="container">
+                    <div className="col-12 slider__list">
+                      <Slider {...settings}>
+                        {this.renderMovieItem(comingMovies)}
+                      </Slider>
+                    </div>
+                  </div>
+                </div>
+                <MovieTrailer xemChiTiet={this.state.movieItem} />
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </Fragment>
+      
       
     )
   }

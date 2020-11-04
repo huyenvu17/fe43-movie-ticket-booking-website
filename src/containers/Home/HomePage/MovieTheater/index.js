@@ -77,17 +77,20 @@ class MovieTheater extends Component {
     })
   }
   render() {
+    let movieTheaterList = this.props.movieTheater;
+    console.log(Object.keys(movieTheaterList).sort()[0])
+   
     return (
       <div className="container theater" id="movieTheater">
         <div className="heading-md">lịch chiếu</div>
         <Tab.Container defaultActiveKey={config.firstMovieTheaterTab}>
           <div className="row theater__panel">
-            <div className="col-3 theater__panel-tab">
+            <div className="col-12 col-lg-3 theater__panel-tab">
               <Nav variant="pills" className="flex-column" id="movieTheaterTab">
                 {this.renderTheaterLogo(this.props.movieTheater)}
               </Nav>
             </div>
-            <div className="col-9 theater__panel-content">
+            <div className="col-12 col-lg-9 theater__panel-content">
               <Tab.Content id="movieTheaterTabContent">
                 {this.renderTheaterMovieList(this.props.movieTheater)}
               </Tab.Content>
