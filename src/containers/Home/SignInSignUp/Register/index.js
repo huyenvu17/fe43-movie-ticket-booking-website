@@ -87,9 +87,9 @@ export default class Register extends Component {
   };
   render() {
     return (
-      <div className="mt-5">
+      <div>
         <form action="#">
-          <h1>Tạo Tài Khoản</h1>
+          <h2>Tạo Tài Khoản</h2>
           <input
             type="text"
             placeholder="Tên Tài Khoản"

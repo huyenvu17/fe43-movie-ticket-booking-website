@@ -16,7 +16,6 @@
     width: 768px;
     max-width: 100%;
     min-height: 600px;
-    margin-top: -60px;
 }
 
 .form-container form {
@@ -84,6 +83,8 @@ button.ghost {
     top: 0;
     height: 100%;
     transition: all .6s ease-in-out;
+    display: flex;
+    justify-content: center;
 }
 
 .sign-in-container {

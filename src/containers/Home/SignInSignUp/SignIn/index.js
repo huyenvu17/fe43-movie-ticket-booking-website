@@ -53,9 +53,9 @@ const SignInForm = (props) => {
       });
   };
   return (
-    <section className="mt-5">
+    <section>
       <form action="#" onSubmit={handChangeSubmit}>
-        <h1>Đăng Nhập</h1>
+        <h2>Đăng Nhập</h2>
         <div className="form-group">
           <input
             type="text"
