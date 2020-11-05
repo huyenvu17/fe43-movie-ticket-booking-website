@@ -146,20 +146,23 @@ export default function BangPhim() {
 }, [searchTerm, danhSachPhim]);
   return (
     <div>
-       <div className="searchBox">
-        <input
-          className="searchInput"
-          type="text"
+      <form className="form-inline navbar-search tb-search">
+        <div className="input-group col-12">
+          <input type="text" className="form-control border-0 small" 
+          placeholder="Nhập tên tài khoản cần tìm....." aria-label="Search" 
+          aria-describedby="basic-addon2"
           value={searchTerm}
           onChange={handleChange}
           name="search"
-          placeholder="Nhập tên tài khoản cần tìm....."
-        />
-        <button className="searchButton" href="#">
-          <i className="fa fa-search" aria-hidden="true"></i>
-        </button>
-      </div>
-     
+           />
+          <div className="input-group-append">
+            <button className="btn btn-primary" type="button">
+              <i className="fas fa-search fa-sm" />
+            </button>
+          </div>
+        </div>
+      </form>
+
    <div className="table-responsive">
         <table className="table">
           <thead className="thead-dark">

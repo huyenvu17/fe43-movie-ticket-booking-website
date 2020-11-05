@@ -125,7 +125,7 @@ export default function BangNguoiDung() {
 
   return (
     <div>
-      <div className="searchBox">
+      {/* <div className="searchBox">
         <input
           className="searchInput"
           type="text"
@@ -137,7 +137,22 @@ export default function BangNguoiDung() {
         <button className="searchButton" href="#">
           <i className="fa fa-search" aria-hidden="true"></i>
         </button>
-      </div>
+      </div> */}
+      <form className="form-inline navbar-search tb-search">
+        <div className="input-group col-12">
+          <input type="text" className="form-control border-0 small" 
+          value={searchTerm}
+          onChange={handleChange}
+          name="search"
+          placeholder="Nhập tên tài khoản cần tìm....."
+           />
+          <div className="input-group-append">
+            <button className="btn btn-primary" type="button">
+              <i className="fas fa-search fa-sm" />
+            </button>
+          </div>
+        </div>
+      </form>
       <div className="table-responsive">
         <table className="table">
           <thead className="thead-dark">

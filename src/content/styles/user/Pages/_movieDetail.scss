@@ -88,13 +88,13 @@
           }
         }
         .below-header {
-          width: 50%;
+          width: 60%;
           height: 50%;
-          padding: spacing(2.4);
+          //padding: spacing(2.4);
           .description {
             @include textStyle($fs-1 + 2, $fw-normal ,$color-gray-1);
             display: -webkit-box;
-            -webkit-line-clamp: 7;
+            -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
             overflow: hidden;
             text-overflow: ellipsis;

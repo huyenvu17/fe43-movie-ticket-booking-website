@@ -83,3 +83,19 @@
     }
   }
 }
+
+@media screen and (max-width: 552px){
+  #movieTheater.theater{
+    #movieTheaterTab{
+      padding: 0 15px;
+      .nav-link {
+        font-size: 13px;
+        img{
+          width: 35px;
+          height: 35px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}

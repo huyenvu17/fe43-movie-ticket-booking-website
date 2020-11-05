@@ -48,7 +48,7 @@ export default function MovieInfo(props) {
       </div>
       <div className="info container">
       <div className="row">
-          <div className="movie__poster col-3">
+          <div className="movie__poster col-12 col-md-3">
             <div className="poster__img">
               <img
                 style={{ width: 220, height: 300, objectFit: 'cover' }}
@@ -64,7 +64,7 @@ export default function MovieInfo(props) {
               </div>
             </div>
           </div>
-          <div className="movie__info col-6">
+          <div className="movie__info col-12 col-md-6">
             <div className="showtime">
               {moment(phim.ngayKhoiChieu).format("DD-MM-yy")}
             </div>
@@ -75,7 +75,7 @@ export default function MovieInfo(props) {
               <button className="bookTicket-btn">Mua Vé</button>                   
             </a>
           </div>
-          <div className="movie__rating col-2">
+          <div className="movie__rating col-12 col-md-2">
             <div className="rating__point">
               {countRating(phim.danhGia)}
               <div className="vongtron"></div>

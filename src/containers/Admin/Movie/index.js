@@ -9,7 +9,7 @@ export default function QuanLyPhim(props) {
   }
   return (
     <div>
-       <h1 className="h3 mb-2 text-gray-800">Bảng Phim</h1>
+       <h1 className="h3 mb-2 text-gray-800">Quản Lý Phim</h1>
                 {/* <p className="mb-4">
                  Bảng Danh sách phim có thể thêm xóa sửa phim 
                 </p> */}

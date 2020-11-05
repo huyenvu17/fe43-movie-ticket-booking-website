@@ -102,7 +102,7 @@ export default function ModalComment(props) {
             <div className="modal-content">
               <div className="modal-body">
                 <form className="comment-form">
-                  <div class="rating">
+                  <div className="rating">
                     <input
                       type="radio"
                       name="rating"

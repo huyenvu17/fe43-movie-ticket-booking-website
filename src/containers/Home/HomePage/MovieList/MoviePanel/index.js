@@ -51,7 +51,6 @@ class MoviePanel extends Component {
           >
             <i className="play-icon fa fa-play"></i>
           </div>
-          {/* <MovieTrailer xemChiTiet={this.props.movieList} /> */}
         </div>
       )
     })
@@ -82,8 +81,6 @@ class MoviePanel extends Component {
     let currentDateConfig = moment().subtract(500, 'days').calendar();
     let showingMovies = movieList.filter(movieFilter => moment(movieFilter.ngayKhoiChieu).format("DD-MM-yyyy") > moment(currentDateConfig).format("DD-MM-yyyy"));
     let comingMovies = movieList.filter(movieFilter => moment(movieFilter.ngayKhoiChieu).format("DD-MM-yyyy") < moment(currentDateConfig).format("DD-MM-yyyy"))
-    //let tabId = showingMovies ? "movie-showing" : "movie-upcoming";
-    //let tabActive = showingMovies ? "actie=ve" : "movie-upcoming";
     return (
       <Fragment>
         <div className="container">

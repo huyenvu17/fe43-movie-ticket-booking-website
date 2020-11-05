@@ -130,7 +130,7 @@
             .below-header {
               width: 50%;
               height: 50%;
-              padding: spacing(2.4);
+              //padding: spacing(2.4);
               .description {
                 @include textStyle($fs-1 + 2, $fw-normal ,$color-gray-1);
                 display: -webkit-box;

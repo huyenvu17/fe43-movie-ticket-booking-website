@@ -1,5 +1,4 @@
 .infoMovie {
-  margin-top: spacing(6.5);
   min-height: 300px;
   background-color: rgb(10, 32, 41);
   position: relative;
@@ -169,6 +168,156 @@
           color: $color-white-0;
           @include Text($fs-0, $fw-normal);
           padding: spacing(0.7);
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 552px){
+  .infoMovie {
+    min-height: 300px;
+    .movie_background {
+      img {
+        width: 100%;
+        filter: blur(8px);
+        object-fit: cover;
+      }
+      .rating__point {
+        display: none;
+        position: absolute;
+        background-color: rgba(12, 27, 54, 0.8);
+        border-radius: 4px;
+        padding: 2px;
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        width: 60px;
+        margin: auto;
+        text-align: center;   
+        .rating__stars {
+          color: $color-yellow;       
+        }
+      }
+    }
+    .info {
+      position: absolute;
+      padding: (0) spacing(2);
+      .row {
+        .movie__poster {
+          .poster__img {
+            position: relative;
+            text-align: center;
+            img{
+              width: 120px!important;
+              height: 200px!important;
+              padding-top: 1em;
+            }
+            &:hover .play__btn {
+              opacity: 1;
+            }
+            .play__btn {
+              position: absolute;
+              opacity: 0;
+              width: 75px;
+              height: 75px;
+              line-height: 78px;
+              border-radius: 50%;
+              text-align: center;
+              top: 35%;
+              left: 29%;
+              border: 2px solid $color-yellow;
+              background-color: rgba(255, 255, 255, 0.15);
+              cursor: pointer;
+              transition: linear 0.2s;         
+              .fa-play {
+                @include Text($fs-2 + 2, $fw-bold);
+                color: $color-yellow;
+              }
+            }
+          }
+        }
+        .movie__info {
+          margin-left: 0;
+          padding-right: 15px;
+          padding-top: spacing(1.5);
+          text-align: center;   
+          .showtime {
+            color: $color-gray;
+            margin-bottom: spacing(0.5);
+          }
+          .code_group{
+            color: $color-white-0;
+            padding: spacing(0.4) spacing(0.7);
+            margin-right: spacing(0.6);
+            margin-top: spacing(0.6);
+            background-color: $color-danger;
+            margin-right: 6px;
+            border-radius: 4px;
+            padding: 5px;
+            @include Text($fs-0 + 2, $fw-normal);
+          }
+          .name_fiml {
+            color: $color-white-0;
+            @include Text($fs-3, $fw-normal);
+          }
+          .time_film {
+            margin-top: 10px;
+            color: $color-white-0;
+            @include Text($fs-0, $fw-normal);
+          }
+          .bookTicket-btn {
+            margin-top: spacing(1);
+            color: $color-white-0;
+            padding: spacing(0.5) spacing(2.5);
+            background-color: $color-purple-0;
+            border: 1px solid $color-purple-0;
+            border-radius: 4px;
+            outline: none;
+            transition: all 0.2s;
+            &:hover {
+              opacity: 0.7;
+            }
+          }
+        }
+        .movie__rating {
+          transform: translateY(20%);
+          padding: 0;
+          text-align: center;
+          .rating__point {
+            position: relative;
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            border: 4px solid #333;
+            margin: auto;
+            line-height: 64px;
+            @include Text($fs-4, $fw-normal);
+            color: $color-white-0;
+            background-color:rgba(0, 0, 0, 0.3);
+            margin-bottom: spacing(1);
+            .vongtron {
+              position: absolute;
+              width: 80px;
+              height: 80px;
+              border: 4px solid #fc8fff;
+              border-radius: 50%;
+              top: -7px;
+              left: -7px;
+              clip: rect(0, 4.7em, 3em, 0);
+              transform: rotate(200deg);
+            }
+          }
+          .rating__stars {
+            color: $color-yellow;
+            @include Text($fs-2, $fw-bold);
+            margin: 5px auto;
+          }
+          .rating__text {
+            // text-align: center;
+            color: $color-white-0;
+            @include Text($fs-0, $fw-normal);
+            padding: spacing(0.7);
+          }
         }
       }
     }

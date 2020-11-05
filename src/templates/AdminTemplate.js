@@ -48,7 +48,7 @@ function AdminLayout(props) {
       return (
         <Fragment>
           <div
-            className="login_toggle mt-4 ml-5"
+            className="login_toggle"
             ref={anchorRef}
             aria-controls={open ? "menu-list-grow" : undefined}
             aria-haspopup="true"

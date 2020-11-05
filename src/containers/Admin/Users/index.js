@@ -11,6 +11,9 @@ export default function QuanLyNguoiDung(props) {
   return (
     <div>
       <div className="row">
+        <div className="col-12">
+          <h1 className="h3 mb-2 text-gray-800">Quản Lý Người Dùng</h1>
+        </div>
         <div className="col-md-6 col-xl-12 text-left">
           <button
             className="btn btn-primary"
